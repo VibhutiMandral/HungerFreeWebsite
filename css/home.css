@@ -74,3 +74,22 @@ ul li {
   padding: 15px;
   font-weight: bold;
 }
+
+
+/* first-section */
+
+.home_page_starting {
+  background: url("img/startingphoto.png");
+}
+.counting_no_section {
+  background-color: black;
+  width: 100%;
+  margin: auto;
+}
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: xx-large;
+  color: rgb(245, 211, 18);
+}
