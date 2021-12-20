@@ -1,0 +1,64 @@
+.company_heading{
+    font-family:Roboto;
+    color:#fff;
+    font-size:48px;
+    margin-bottom:2em;
+    float:left;
+}
+
+.footer_background_design{
+    background-color:black;
+    padding: 5em;
+}
+
+.footer_table_design{
+    color:#fff;
+    font-family:Roboto;
+
+}
+
+.footer_table_design tr, td{
+    padding-right:4em;
+    padding-bottom: 2em;
+}
+
+.copyright_format{
+    color: #fff;
+    font-family:Roboto;
+    text-align: center;
+    margin-top:2em;
+}
+
+.media_handles_design{
+    background-color:rgb(48, 48, 48);
+    float:right;
+}
+
+.plain_text{
+    color:white;
+    text-align: center;
+}
+
+.quote_design{
+    font-family: Sacramento;
+    font-size:2em;
+    line-height:auto;
+    color:white;
+    word-wrap: break-word;
+    text-align: right;
+    padding:10px;
+    
+}
+
+.social_design_row{
+    color: white;
+}
+.socials_design{
+    size:2em;
+    padding:2em;
+    margin-top:2em;
+    margin-left: auto;
+    margin-right: auto;
+  
+    
+}

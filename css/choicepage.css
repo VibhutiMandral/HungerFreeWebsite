@@ -1,0 +1,71 @@
+.h {
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+.form-box {
+  width: 40%;
+  height: 500px;
+  position: relative;
+  margin: 6% auto;
+  background: white;
+  padding: 5px;
+  display: inline-block;
+  border-radius: 19px;
+  padding-top: 40px;
+  text-align: center;
+}
+.container {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  justify-content: right;
+}
+.heading {
+  color: white;
+  padding-top: 20px;
+  text-align:center;
+}
+.image {
+  height: 35%;
+  width: 50%;
+  border-radius: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+.new {
+  margin-bottom: 15px;
+  font-size: 30px;
+  font-family: scaramento;
+}
+.button {
+  margin-top: 25%;
+}
+
+
+
+
+
+/*navbar*/
+.nav_design {
+  background-color: #fdd400;
+}
+.logo {
+  font-family: Rubik Mono One;
+  float: left;
+  color: black;
+  font-size: 1.1em;
+}
+.keys li {
+  padding: 0em 1em 0em 1em;
+  font-family: roboto;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}

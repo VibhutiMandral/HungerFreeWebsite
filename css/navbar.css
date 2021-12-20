@@ -1,0 +1,21 @@
+.nav_design{
+    background-color: #FDD400;
+}
+.logo{
+    font-family:Rubik Mono One;
+    float:left;
+    color:black;
+    font-size:1.1em;
+}
+.keys li{
+    padding:0em 1em 0em 1em;
+    font-family:roboto;
+    font-weight:bold;
+    float:right;
+    color:black;
+}
+ul li{
+    
+    text-decoration: none;
+    list-style-type: none;
+}
