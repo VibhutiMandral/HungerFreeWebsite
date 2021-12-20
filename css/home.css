@@ -23,7 +23,9 @@ body {
 .sharing {
   margin-top: 20px;
   margin-bottom: 20px;
-  padding: 0;
+  margin:2em;
+  padding:2em;
+  
 }
 
 .sharing img {
@@ -38,12 +40,16 @@ body {
 
 .sharing h2 {
   margin-top: 5%;
+  font-family: Roboto;
+  font-size: 3em;
+ 
 }
 
 .sharing p{
   font-family:roboto;
   word-wrap: break-word;
   font-size:2em;
+  margin:2em;
 }
 
 /* navbar-css */
