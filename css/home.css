@@ -80,6 +80,9 @@ ul li {
 
 .home_page_starting {
   background: url("../img/startingphoto.png");
+  background-repeat: no-repeat;
+  width:100%;
+  
 }
 .counting_no_section {
   background-color: black;
@@ -90,6 +93,16 @@ ul li {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  font-size: xx-large;
+  font-size: 2em;
   color: rgb(245, 211, 18);
+  padding:3em;
 }
+
+.counter-container b{
+  font-size: 3em;
+}
+.counter-container h6{
+  font-family: roboto;
+  font-align:center;
+}
+
