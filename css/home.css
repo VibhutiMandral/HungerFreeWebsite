@@ -121,3 +121,25 @@ ul li {
   font-align:center;
 }
 
+/*coll*/
+
+.coll {
+  width: 600px;
+  height: 400px;
+  position: relative;
+  margin: 200px auto;
+  background-color: black; 
+ font-family: "Sacramento";
+ text-size:7rem;
+ font-weight:bold;
+
+}
+.coll img {
+  width: 600px;
+  height: 400px;
+}
+.text {
+  color: black;
+  font-size: 20;
+  position: absolute;
+}
