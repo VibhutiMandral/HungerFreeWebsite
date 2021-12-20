@@ -15,9 +15,9 @@ body {
 }
 
 .wasting-food h2 {
-  margin-left: 5%;
-  margin-top: 13%;
-  padding-right: 10%;
+  margin:2em;
+  font-family:Roboto;
+  font-size:3em;
 }
 
 .sharing {
@@ -27,17 +27,23 @@ body {
 }
 
 .sharing img {
-  height: 10%;
+  
   width: 45%;
   padding: 4%;
   padding-left: 0;
   border-radius: 35%;
-  transform: rotate(15deg);
+  transform: rotate(10deg);
   float: left;
 }
 
 .sharing h2 {
   margin-top: 5%;
+}
+
+.sharing p{
+  font-family:roboto;
+  word-wrap: break-word;
+  font-size:2em;
 }
 
 /* navbar-css */
@@ -64,7 +70,7 @@ ul li {
 }
 /* quote */
 .quote {
-  height: 200px;
+  padding:2em;
   width: auto;
   background-color: #fdd400;
 }
@@ -73,6 +79,9 @@ ul li {
   text-align: center;
   padding: 15px;
   font-weight: bold;
+  padding:2em;
+  font-family:Sacramento;
+
 }
 
 
