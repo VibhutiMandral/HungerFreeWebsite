@@ -1,0 +1,21 @@
+.login_background_design{
+    background-color:rgb(15, 15, 15);
+}
+.form_design{
+    margin-left:auto;
+    margin-right:auto;
+    background-color:white;
+    margin-bottom:auto;
+    margin-top:auto;
+    border-radius:19px;
+}
+.form_heading{
+    font-family:Sacramento;
+    font-size:2em;
+    text-align:center;
+    color:white;
+}
+.login_spacing{
+    margin:2em;
+
+}

@@ -1,0 +1,76 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wasting-food {
+  background-color: black;
+  color: white;
+  display: inline-block;
+}
+
+.wasting-food img {
+  margin-left: 5%;
+  float: right;
+}
+
+.wasting-food h2 {
+  margin-left: 5%;
+  margin-top: 13%;
+  padding-right: 10%;
+}
+
+.sharing {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.sharing img {
+  height: 10%;
+  width: 45%;
+  padding: 4%;
+  padding-left: 0;
+  border-radius: 35%;
+  transform: rotate(15deg);
+  float: left;
+}
+
+.sharing h2 {
+  margin-top: 5%;
+}
+
+/* navbar-css */
+
+.nav_design {
+  background-color: #fdd400;
+}
+.logo {
+  font-family: Rubik Mono One;
+  float: left;
+  color: black;
+  font-size: 1.1em;
+}
+.keys li {
+  padding: 0em 1em 0em 1em;
+  font-family: roboto;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+/* quote */
+.quote {
+  height: 200px;
+  width: auto;
+  background-color: #fdd400;
+}
+.quote p {
+  font-size: 3rem;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
