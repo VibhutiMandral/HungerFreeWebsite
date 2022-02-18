@@ -1,0 +1,24 @@
+{
+  "name": "hungerfreewebsite",
+  "version": "1.0.0",
+  "description": "Hunger Free WebApp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vector70/HungerFreeWebsite.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vector70/HungerFreeWebsite/issues"
+  },
+  "homepage": "https://github.com/vector70/HungerFreeWebsite#readme",
+  "dependencies": {
+    "express": "^4.17.2",
+    "hbs": "^4.2.0"
+  }
+}

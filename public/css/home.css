@@ -1,0 +1,123 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.wasting-food {
+  background-color: black;
+  color: white;
+  display: inline-block;
+}
+
+.wasting-food img {
+  margin-left: 5%;
+  float: right;
+}
+
+.wasting-food h2 {
+  margin:2em;
+  font-family:Roboto;
+  font-size:3em;
+}
+
+.sharing {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin:2em;
+  padding:2em;
+  
+}
+
+.sharing img {
+  
+  width: 45%;
+  padding: 4%;
+  padding-left: 0;
+  border-radius: 35%;
+  transform: rotate(10deg);
+  float: left;
+}
+
+.sharing h2 {
+  margin-top: 5%;
+  font-family: Roboto;
+  font-size: 3em;
+ 
+}
+
+.sharing p{
+  font-family:roboto;
+  word-wrap: break-word;
+  font-size:2em;
+  margin:2em;
+}
+
+/* navbar-css */
+
+.nav_design {
+  background-color: #fdd400;
+}
+.logo {
+  font-family: Rubik Mono One;
+  float: left;
+  color: black;
+  font-size: 1.1em;
+}
+.keys li {
+  padding: 0em 1em 0em 1em;
+  font-family: roboto;
+  font-weight: bold;
+  float: right;
+  color: black;
+}
+ul li {
+  text-decoration: none;
+  list-style-type: none;
+}
+/* quote */
+.quote {
+  padding:2em;
+  width: auto;
+  background-color: #fdd400;
+}
+.quote p {
+  font-size: 3rem;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+  padding:2em;
+  font-family:Sacramento;
+
+}
+
+
+/* first-section */
+
+.home_page_starting {
+  background: url("../img/startingphoto.png");
+  background-repeat: no-repeat;
+  width:100%;
+  
+}
+.counting_no_section {
+  background-color: black;
+  width: 100%;
+  margin: auto;
+}
+.counter-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 2em;
+  color: rgb(245, 211, 18);
+  padding:3em;
+}
+
+.counter-container b{
+  font-size: 3em;
+}
+.counter-container h6{
+  font-family: roboto;
+  font-align:center;
+}
+
