@@ -1,93 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
+{{>header}}
+<!-- StyleSheets -->
+<link rel="stylesheet" href="/css/home.css" />
+<link rel="stylesheet" href="/css/index.css">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Rubik+Mono+One&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Sacramento&display=swap"
-    rel="stylesheet" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;700&family=Sacramento&display=swap"
-    rel="stylesheet" />
-
-  <!-- Bootstrap -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
-
-  <!-- StyleSheets -->
-  <link rel="stylesheet" href="/css/home.css" />
-  <link rel="stylesheet" href="/css/index.css">
-
-  <title>HungerFree</title>
+<title>HungerFree</title>
 </head>
 
 <body>
-  <div class="navbar nav_design">
-    <div class="container">
-      <div class="logo"><strong>HungerFree</strong></div>
-      <div class="keys">
-        <ul>
-          <li>
-            <a href="/choicepage"><button style="
-                  background-color: black;
-                  color: white;
-                  font-weight: bold;
-                  border: none;
-                  border-radius: 5px;
-                ">
-                Register <i class="fas fa-angle-double-right"></i>
-              </button>
-            </a>
-          </li>
-          <li>About</li>
-          <li>Home</li>
-          <li>News</li>
-          <li>Donate</li>
-        </ul>
-      </div>
-    </div>
-  </div>
+  <!-- this is navbar -->
+  {{>navbar}}
 
   <section class="first-section" style="background-color: black;">
-    
+
     <div class="home_page_starting">
       <br />
       <div class="container">
-      <h1 style="
+        <h1 style="
             text-align: right;
             padding:1em;
             color: rgb(245, 211, 18);
             font-size: 12vh;
           ">
-        Together,
-        <br />
-        we can
-        <br />
-        feed
-        <br />
-        everyone!
-      </h1>
+          Together,
+          <br />
+          we can
+          <br />
+          feed
+          <br />
+          everyone!
+        </h1>
 
+      </div>
     </div>
-    </div>
-	    
+
     <section class="counting_no_section">
       <div class="counter-container">
         <div class="counter">
@@ -106,16 +51,16 @@
     </section>
     </div>
   </section>
-	<!-- collage-->
-	
-	<div class="coll">
-      <img src="img/hungry_kid.jpg" />
-      <p>
-        The statistics are depressing. Every ninth person in the world ishungry,
-        according to the World Food Programme. A staggering 800 Million People
-        in the world go to the bed hungry every day, based on an estimated world
-        population of 7.6 Billion.</p>
-    </div>
+  <!-- collage-->
+
+  <div class="coll">
+    <img src="img/hungry_kid.jpg" />
+    <p>
+      The statistics are depressing. Every ninth person in the world ishungry,
+      according to the World Food Programme. A staggering 800 Million People
+      in the world go to the bed hungry every day, based on an estimated world
+      population of 7.6 Billion.</p>
+  </div>
   <section class="wasting-food">
     <img src="img/wasting-food-img.png" alt="wasting food img" />
     <h2>

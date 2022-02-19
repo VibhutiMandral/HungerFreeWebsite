@@ -1,0 +1,47 @@
+{{>header}}
+<!-- styleSheet -->
+<link rel="stylesheet" href="/css/ngoregister.css">
+<title>Ngo Register</title>
+</head>
+
+<body>
+    {{>navbar}}
+
+    <div class="split-screen">
+        <div class="left">
+            <section class="copy">
+                <h1>Join Us</h1>
+            </section>
+        </div>
+        <div class="right">
+            <form action="">
+                <section class="copy">
+                    <h2>Register Here</h2>
+                    <div class="login-container">
+                        <p>Already have an account?<a href="#"><strong>Log In</strong></a></p>
+                    </div>
+                </section>
+                <div class="input-container name">
+                    <label for="fname">Full Name</label>
+                    <input id="fname" name="fname" type="text">
+                </div>
+                <div class="input-container name">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div class="input-container name">
+                    <label for="password">Password</label>
+                    <input id="password" name="password" placeholder="Must be atleast 6 characters" type="password">
+                    <i class="far fa-eye-slash"></i>
+                </div>
+                <button class="signup-btn" type="submit">Register</button>
+                <section class="copy legal">
+                    <p><span class="small">By continuing, you agree to accept our <br><a href="#">Privacy
+                                Policy</a>&amp;<a href="">Terms Of Service</a>.</span></p>
+                </section>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
