@@ -38,38 +38,11 @@
     <script defer src="/your-path-to-fontawesome/js/brands.js"></script>
     <script defer src="/your-path-to-fontawesome/js/solid.js"></script>
     <script defer src="/your-path-to-fontawesome/js/fontawesome.js"></script>
-</head>-
+</head>
 
-<body style="background-color: rgb(15, 15, 15);">
-
-
-    <!--Navbar of the project-->
-    <div class="navbar nav_design">
-        <div class="container">
-            <div class="logo"><strong>HungerFree</strong></div>
-            <div class="keys">
-                <ul>
-                    <li>
-                        <a href="/choicepage"><button style="
-                  background-color: black;
-                  color: white;
-                  font-weight: bold;
-                  border: none;
-                  border-radius: 5px;
-                ">
-                                Register <i class="fas fa-angle-double-right"></i>
-                            </button>
-                        </a>
-                    </li>
-                    <li>About</li>
-                    <li>Home</li>
-                    <li>News</li>
-                    <li>Donate</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-
+<body >
+    <!-- Navbar of the project -->
+   {{>navbar}}
 
     <!--LoginPage of the project-->
     <div class="login_background_design">
@@ -109,7 +82,7 @@
                             <center><button class="btn btn-success btn-lg" type="button">LogIn</button></center>
                         </div>
 
-                        <p style="text-align:center;">Don't have an account? <a href="#!" class="link-info">Register
+                        <p style="text-align:center;">Don't have an account? <a href="/choicepage" class="link-info">Register
                                 here</a> or <a class="text-muted" href="#!">Forgot password?</a></p>
 
                     </form>
@@ -122,6 +95,7 @@
         <br>
         <br>
     </div>
+    
 
 </body>
 
