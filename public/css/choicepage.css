@@ -4,7 +4,7 @@
   color: white;
 }
 .form-box {
-  width: 40%;
+  width: 48%;
   height: 500px;
   position: relative;
   margin: 6% auto;
@@ -12,7 +12,7 @@
   padding: 5px;
   display: inline-block;
   border-radius: 19px;
-  padding-top: 40px;
+  padding: 50px;
   text-align: center;
 }
 .container {
@@ -28,9 +28,9 @@
   text-align:center;
 }
 .image {
-  height: 35%;
-  width: 50%;
-  border-radius: 50%;
+  height: 50%;
+  width: 70%;
+  
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -38,10 +38,13 @@
 .new {
   margin-bottom: 15px;
   font-size: 30px;
-  font-family: scaramento;
+  font-family: Sacramento;
+  font-weight:bold;
 }
 .button {
   margin-top: 25%;
+  background-color:black;
+  font-weight: bold;
 }
 
 
