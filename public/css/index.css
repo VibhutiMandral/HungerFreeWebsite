@@ -1,3 +1,10 @@
+#front_img{
+    background: url("../img/startingphoto.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    width:100%;
+}
+
 .company_heading{
     font-family:Roboto;
     color:#fff;
