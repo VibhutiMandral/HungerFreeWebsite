@@ -5,7 +5,19 @@ body {
       url("../img/restaurant_register_page_BG.png");
     background-size: cover;
   }
-  
+  .right{
+    background-color: white;
+    border-radius: 12px;
+    padding:10%;
+    width:50%;
+  }
+  .heading{
+    font-family:Sacramento;
+    font-weight:bold;
+    color:#FFD600;
+    font-size: 2em;
+    text-align: center;
+  }
   h1 {
     font-size: 2.25rem;
     font-weight: 700;
@@ -67,7 +79,7 @@ body {
   form input[type="text"],
   form input[type="email"],
   form input[type="password"] {
-    display: block;
+    
     width: 100%;
     box-sizing: border-box;
     border-radius: 8px;
