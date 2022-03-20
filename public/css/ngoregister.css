@@ -1,8 +1,16 @@
 :root {
     font-size: 100%;
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1;
     --primary-blue: #233975;
+}
+
+.heading{
+    font-family:Sacramento;
+    font-weight:bold;
+    color:#FFD600;
+    font-size: 2em;
+    text-align: center;
 }
 
 body{
@@ -39,21 +47,39 @@ a:hover{
 .split-screen{
     display:flex;
     flex-direction: column;
+    /* height:100%; */
 }
 
 .left{
-    height: 200px;
-}
-
-.left, .right{
     display:flex;
     justify-content:center;
     align-items: center;
+    flex-basis:50%;
+}
+
+.right{
+    display:flex;
+    justify-content: space-around;
+    align-items:center;
+}
+
+.my-card{
+    border-radius: 4%;
+    box-shadow: 5px 5px 20px 2px rgb(53, 52, 52);
+    height:90%;
+    padding-left:7%;
+    padding-right:7%; 
 }
 
 .left{
     background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,1)),url('../img/rejoice.jpg');
+    background-position: left center;
     background-size: cover;
+}
+
+.btn-color{
+    background-color: #5BC607;
+    color:white;
 }
 
 .left .copy {
