@@ -11,11 +11,15 @@
 }
 .form_heading{
     font-family:Sacramento;
-    font-size:2em;
+    font-size:3em;
     text-align:center;
     color:white;
 }
 .login_spacing{
-    margin:2em;
+    margin:auto;
+    width:40%;
+}
 
+.login-heading{
+    font-size:2em;
 }

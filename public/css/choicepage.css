@@ -1,36 +1,39 @@
+body{
+  background-color: black;
+}
+
 .h {
   height: 100%;
   width: 100%;
   color: white;
 }
+
 .form-box {
-  width: 48%;
-  height: 500px;
-  position: relative;
-  margin: 6% auto;
+  width: 45%;
+  height: 60%;
   background: white;
   padding: 5px;
   display: inline-block;
   border-radius: 19px;
   padding: 50px;
   text-align: center;
+  margin-left: 2%;
+  margin-right:2%;
 }
-.container {
-  display: flex;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  justify-content: right;
+
+.box {
+  width: 70%;
+  margin-left:auto;
+  margin-right:auto;
 }
 .heading {
+  margin-top:3%;
   color: white;
-  padding-top: 20px;
   text-align:center;
 }
 .image {
   height: 50%;
   width: 70%;
-  
   margin-right: auto;
   margin-left: auto;
   display: block;
@@ -45,30 +48,4 @@
   margin-top: 25%;
   background-color:black;
   font-weight: bold;
-}
-
-
-
-
-
-/*navbar*/
-.nav_design {
-  background-color: #fdd400;
-}
-.logo {
-  font-family: Rubik Mono One;
-  float: left;
-  color: black;
-  font-size: 1.1em;
-}
-.keys li {
-  padding: 0em 1em 0em 1em;
-  font-family: roboto;
-  font-weight: bold;
-  float: right;
-  color: black;
-}
-ul li {
-  text-decoration: none;
-  list-style-type: none;
 }
