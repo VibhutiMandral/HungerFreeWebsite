@@ -25,31 +25,32 @@
               </p>
             </div>
           </section>
-          <form>
+          <form action="/restaurantRegisterPage" method="post">
           <div class="input-container name">
-            <label for="fname">Restaurant Name</label>
-            <input id="fname" name="fname" type="text" />
+            <label for="restaurantName">Restaurant Name</label>
+            <input id="restaurantName" name="restaurantName" type="text" placeholder="Enter Restaurant Name" required/>
           </div>
           <div class="input-container name">
-            <label for="fname">Admin Name</label>
-            <input id="fname" name="fname" type="text" />
+            <label for="adminName">Admin Name</label>
+            <input id="adminName" name="adminName" type="text" placeholder="Enter Admin Name" required/>
           </div>
           <div class="input-container name">
-            <label for="fname">Location</label>
-            <input id="fname" name="fname" type="text" />
+            <label for="location">Location</label>
+            <input id="location" name="location" type="text" placeholder="Enter Restaurant Location" required/>
           </div>
 
           <div class="input-container name">
             <label for="email">Email ID</label>
-            <input id="email" name="email" type="email" />
+            <input id="email" name="email" type="email" placeholder="Enter Email" required/>
           </div>
           <div class="input-container name">
             <label for="password">Password</label>
-            <input id="password" name="password" placeholder="Must be atleast 6 characters" type="password" />
+            <input id="password" name="password" placeholder="Must be atleast 6 characters" type="password" required/>
            <br>
            <br>
           </div>
-          <button class="signup-btn" type="submit">Register</button>
+          <input type="submit" class="signup-btn" value="Register">
+          {{!-- <button class="signup-btn" type="submit">Register</button> --}}
         </form>
           <section class="copy legal">
             <p>
