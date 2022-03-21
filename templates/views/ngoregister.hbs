@@ -17,7 +17,7 @@
             <div class="right">
                 <div class="card my-card">
                     <div class="px-5 card-body">
-                        <form class="form-group" action="">
+                        <form class="form-group" action="/ngoregister" method="post">
                             <section class="copy">
                                 <h2 class="heading">Join Us</h2>
                                 <div class="login-container">
@@ -25,12 +25,12 @@
                                 </div>
                             </section>
                             <div class="form-group name">
-                                <label for="ngo-name">NGO Name</label>
-                                <input class="form-control" id="ngo-name" name="ngo-name" type="text" placeholder="Enter NGO Name" required>
+                                <label for="ngoName">NGO Name</label>
+                                <input class="form-control" id="ngoName" name="ngoName" type="text" placeholder="Enter NGO Name" required>
                             </div>
                             <div class="form-group name">
-                                <label for="admin-name">Admin Name</label>
-                                <input class="form-control" id="admin-name" name="admin-name" type="text" placeholder="Enter Admin Name" required>
+                                <label for="adminName">Admin Name</label>
+                                <input class="form-control" id="adminName" name="adminName" type="text" placeholder="Enter Admin Name" required>
                             </div>
                             <div class="form-group name">
                                 <label for="email">Email</label>
@@ -41,7 +41,7 @@
                                 <input class="form-control" id="password" name="password" placeholder="Must be atleast 6 characters" type="password" required>
                                 <i class="far fa-eye-slash"></i>
                             </div>
-                            <button class="btn btn-block btn-color" type="submit">Register</button>
+                            <input type="submit" class="btn btn-block btn-color" value="Register">
                             {{!-- <section class="copy legal">
                                 <p><span class="small">By continuing, you agree to accept our <br><a href="#">Privacy
                                             Policy</a>&amp;<a href="">Terms Of Service</a>.</span></p>
