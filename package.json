@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js -e css,js,hbs,json",
-    "start":"node src/app.js"
+    "start": "node src/app.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "homepage": "https://github.com/vector70/HungerFreeWebsite#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "hbs": "^4.2.0"
+    "hbs": "^4.2.0",
+    "mongoose": "^6.2.7"
   }
 }
