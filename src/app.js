@@ -83,6 +83,10 @@ app.get("/login",(req,res)=>{
     res.render('login');
 });
 
+app.post("/login", async(req,res)=>{
+    res.send("Hello!");
+});
+
 app.listen(port,()=>{
     console.log("Server is up and running on port " + port + ".");
 });
