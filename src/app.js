@@ -2,6 +2,9 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
+require('./db/mongoose');
+const NgoUser = require('./models/ngo');
+const RestaurantUser = require('./models/restaurant');
 
 const app = express();
 
@@ -35,20 +38,45 @@ app.get("/ngoregister",(req,res)=>{
 
 });
 
-app.post("/ngoregister",(req,res)=>{
+app.post("/ngoregister",async(req,res)=>{
+    const ngoUser = new NgoUser({
+        ngoName:req.body.ngoName,
+        ngoAdminName:req.body.adminName,
+        ngoEmail:req.body.email,
+        ngoPassword:req.body.password
+    });
 
-    console.log("NGO Name is " + req.body.ngoName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
-
+    try{
+        await ngoUser.save();
+        res.send(ngoUser);
+    }
+    catch(e){
+        res.status(500).send(e);
+    }
+    // console.log("NGO Name is " + req.body.ngoName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
 });
 
 app.get("/restaurantRegisterPage",(req,res)=>{
     res.render('restaurantRegisterPage.hbs');
 });
 
-app.post("/restaurantRegisterPage",(req,res)=>{
+app.post("/restaurantRegisterPage",async(req,res)=>{
+    const restaurantUser = new RestaurantUser({
+        restaurantName: req.body.restaurantName,
+        restaurantAdminName: req.body.adminName,
+        restaurantLocation: req.body.location,
+        restaurantEmail: req.body.email,
+        restaurantPassword: req.body.password
+    });
 
-    console.log("Restaurant Name is " + req.body.restaurantName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
-
+    try{
+        await restaurantUser.save();
+        res.send(restaurantUser);
+    }
+    catch(e){
+        res.status(500).send(e);
+    }
+    // console.log("Restaurant Name is " + req.body.restaurantName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
 });
 
 app.get("/login",(req,res)=>{
