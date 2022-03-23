@@ -55,12 +55,6 @@ app.get("/news",(req,res)=>{
 
 });
 
-app.get("/ngoviewpage",(req,res)=>{
-    
-    res.render('ngoviewpage.hbs');
-
-});
-
 app.post("/ngoregister",async(req,res)=>{
     const ngoUser = new NgoUser({
         ngoName:req.body.ngoName,
