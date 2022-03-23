@@ -24,9 +24,14 @@ li a{
     text-decoration: none;
 }
 
-a {
+a:hover {
     text-decoration: none;
 }
 a:link, a:visited {
     color: black;
+}
+
+li a:hover{
+    text-decoration:none;
+    color:white;
 }
