@@ -6,6 +6,8 @@ require('./db/mongoose');
 const NgoUser = require('./models/ngo');
 const RestaurantUser = require('./models/restaurant');
 const cookieParser = require('cookie-parser');
+const auth = require('./middleware/auth');
+const res = require('express/lib/response');
 
 const app = express();
 
@@ -23,6 +25,7 @@ hbs.registerPartials(partialsPath);
 app.use(bodyParser.urlencoded({
     extended: true
 }));
+app.use(cookieParser());
 
 
 app.get("/",(req,res)=>{
@@ -49,9 +52,13 @@ app.post("/ngoregister",async(req,res)=>{
 
     try{
         const token = await ngoUser.generateAuthToken();
-        ngoUser.tokens = ngoUser.tokens.concat({token});
+        // ngoUser.tokens = ngoUser.tokens.concat({token});
         await ngoUser.save();
-        res.send(ngoUser);
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/ngoViewPage");
     }
     catch(e){
         res.status(500).send(e);
@@ -74,10 +81,13 @@ app.post("/restaurantRegisterPage",async(req,res)=>{
 
     try{
         const token = await restaurantUser.generateAuthToken();
-        restaurantUser.tokens = restaurantUser.tokens.concat({token});
-
+        // restaurantUser.tokens = restaurantUser.tokens.concat({token});
         await restaurantUser.save();
-        res.send(restaurantUser);
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/restaurantViewPage");
     }
     catch(e){
         res.status(500).send(e);
@@ -93,10 +103,13 @@ app.post("/ngoLogin", async(req,res)=>{
     try{
         const ngoUser = await NgoUser.findByCredentials(req.body.email,req.body.password);
         const token = await ngoUser.generateAuthToken();
-        ngoUser.tokens = ngoUser.tokens.concat({token});
-        
-        await ngoUser.save();
-        res.send(ngoUser);
+        // ngoUser.tokens = ngoUser.tokens.concat({token});
+        // await ngoUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/ngoViewPage");
     }
     catch(e){
         res.redirect("/choicepage");
@@ -111,13 +124,34 @@ app.post("/restaurantLogin", async(req,res)=>{
     try{
         const restaurantUser = await RestaurantUser.findByCredentials(req.body.email,req.body.password);
         const token = await restaurantUser.generateAuthToken();
-        restaurantUser.tokens = restaurantUser.tokens.concat({token});
-
-        await restaurantUser.save();
-        res.send(restaurantUser);
+        // restaurantUser.tokens = restaurantUser.tokens.concat({token});
+        // await restaurantUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/restaurantViewPage");
     }
     catch(e){
         res.redirect("/choicepage");
+    }
+});
+
+app.get("/ngoViewPage",auth,(req,res)=>{
+    res.render("ngoViewPage");
+});
+
+app.get("/restaurantViewPage",auth,(req,res)=>{
+    res.render("restaurantViewPage");
+})
+
+app.post("/logout",(req,res)=>{
+    try{
+        res.clearCookie("jwt");
+        res.redirect("/");
+    }
+    catch(e){
+        res.send("Error in loggin out!");
     }
 });
 

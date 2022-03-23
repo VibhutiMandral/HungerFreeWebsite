@@ -6,18 +6,18 @@ const ngoUserSchema = new mongoose.Schema({
     ngoName: String,
     ngoAdminName: String,
     ngoEmail: String,
-    ngoPassword: String,
-    tokens:[{
-        token: {
-            type:String,
-            required: true
-        }
-    }]
+    ngoPassword: String
+    // ,tokens:[{
+    //     token: {
+    //         type:String,
+    //         required: true
+    //     }
+    // }]
 });
 
 ngoUserSchema.methods.generateAuthToken = async function(){
     const user = this;
-    const token = jwt.sign({_id:user.id.toString()},'thisisacode');
+    const token = jwt.sign({_id:user.id.toString()},'thisisasecretcode');
     return token
 }
 

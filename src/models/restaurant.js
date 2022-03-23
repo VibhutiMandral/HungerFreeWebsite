@@ -7,18 +7,18 @@ const restaurantUserSchema = new mongoose.Schema({
     restaurantAdminName: String,
     restaurantLocation: String,
     restaurantEmail: String,
-    restaurantPassword: String,
-    tokens:[{
-        token:{
-            type: String,
-            required: true
-        }
-    }]
+    restaurantPassword: String
+    // ,tokens:[{
+    //     token:{
+    //         type: String,
+    //         required: true
+    //     }
+    // }]
 });
 
 restaurantUserSchema.methods.generateAuthToken = async function(){
     const user = this;
-    const token = jwt.sign({_id: user.id.toString()}, 'thisisacode');
+    const token = jwt.sign({_id: user.id.toString()}, 'thisisasecretcode');
     return token;
 }
 
