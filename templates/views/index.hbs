@@ -17,7 +17,7 @@
         <h1 style="
             text-align: right;
             padding:1em;
-            color: rgb(245, 211, 18);
+            color:#FDD400;
             font-size: 12vh;
           ">
           Together,
@@ -151,6 +151,14 @@
 
   </div>
   <script type="text/javascript" src="js/homepage.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  <script type="text/javascript">
+    $('div').mousemove(function(a){
+    var mouseX =  (a.pageX*-1/100);
+    var mouseY =  (a.pageY*-1/100);
+    $(this).css('background-position',mouseX+'px '+mouseY+'px ')
+  })</script>
+
 </body>
 
 </html>

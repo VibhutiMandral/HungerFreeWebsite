@@ -16,3 +16,6 @@ counters.forEach((counter) => {
   };
   updateCount();
 });
+
+
+
