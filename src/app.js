@@ -35,6 +35,12 @@ app.get("/ngoregister",(req,res)=>{
 
 });
 
+app.get("/ngoviewpage",(req,res)=>{
+    
+    res.render('ngoviewpage.hbs');
+
+});
+
 app.post("/ngoregister",(req,res)=>{
 
     console.log("NGO Name is " + req.body.ngoName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
