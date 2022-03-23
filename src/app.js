@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 require('./db/mongoose');
 const NgoUser = require('./models/ngo');
 const RestaurantUser = require('./models/restaurant');
+const cookieParser = require('cookie-parser');
 
 const app = express();
 
@@ -47,6 +48,8 @@ app.post("/ngoregister",async(req,res)=>{
     });
 
     try{
+        const token = await ngoUser.generateAuthToken();
+        ngoUser.tokens = ngoUser.tokens.concat({token});
         await ngoUser.save();
         res.send(ngoUser);
     }
@@ -70,6 +73,9 @@ app.post("/restaurantRegisterPage",async(req,res)=>{
     });
 
     try{
+        const token = await restaurantUser.generateAuthToken();
+        restaurantUser.tokens = restaurantUser.tokens.concat({token});
+
         await restaurantUser.save();
         res.send(restaurantUser);
     }
@@ -79,12 +85,40 @@ app.post("/restaurantRegisterPage",async(req,res)=>{
     // console.log("Restaurant Name is " + req.body.restaurantName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
 });
 
-app.get("/login",(req,res)=>{
-    res.render('login');
+app.get("/ngoLogin",(req,res)=>{
+    res.render('ngoLogin');
 });
 
-app.post("/login", async(req,res)=>{
-    res.send("Hello!");
+app.post("/ngoLogin", async(req,res)=>{
+    try{
+        const ngoUser = await NgoUser.findByCredentials(req.body.email,req.body.password);
+        const token = await ngoUser.generateAuthToken();
+        ngoUser.tokens = ngoUser.tokens.concat({token});
+        
+        await ngoUser.save();
+        res.send(ngoUser);
+    }
+    catch(e){
+        res.redirect("/choicepage");
+    }
+});
+
+app.get("/restaurantLogin",(req,res)=>{
+    res.render('restaurantLogin');
+})
+
+app.post("/restaurantLogin", async(req,res)=>{
+    try{
+        const restaurantUser = await RestaurantUser.findByCredentials(req.body.email,req.body.password);
+        const token = await restaurantUser.generateAuthToken();
+        restaurantUser.tokens = restaurantUser.tokens.concat({token});
+
+        await restaurantUser.save();
+        res.send(restaurantUser);
+    }
+    catch(e){
+        res.redirect("/choicepage");
+    }
 });
 
 app.listen(port,()=>{
