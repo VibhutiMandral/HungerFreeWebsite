@@ -3,7 +3,8 @@
     background-repeat: no-repeat;
     background-position: center;
     width:100%;
-    background-size:100%,120%;
+    height:100%;
+    background-size:100%;
     overflow:hidden;
 
 }
