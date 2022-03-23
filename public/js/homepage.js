@@ -1,5 +1,5 @@
 const counters = document.querySelectorAll(".count");
-const speed = 150;
+const speed = 300;
 
 counters.forEach((counter) => {
   const updateCount = () => {
@@ -9,7 +9,7 @@ counters.forEach((counter) => {
 
     if (count < target) {
       counter.innerText = count + increment;
-      setTimeout(updateCount, 1);
+      setTimeout(updateCount, 15);
     } else {
       counter.innerText = target;
     }
