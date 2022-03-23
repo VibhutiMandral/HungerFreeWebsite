@@ -61,7 +61,6 @@ app.get("/ngoviewpage",(req,res)=>{
 
 });
 
-=======
 app.post("/ngoregister",async(req,res)=>{
     const ngoUser = new NgoUser({
         ngoName:req.body.ngoName,

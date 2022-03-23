@@ -1,95 +1,180 @@
-{{>header}}
+const express = require('express');
+const path = require('path');
+const hbs = require('hbs');
+const bodyParser = require('body-parser');
+require('./db/mongoose');
+const NgoUser = require('./models/ngo');
+const RestaurantUser = require('./models/restaurant');
+const cookieParser = require('cookie-parser');
+const auth = require('./middleware/auth');
+const res = require('express/lib/response');
 
-<!-- styleSheet -->
-<link rel="stylesheet" href="/css/navbar.css" />
-<link rel="stylesheet" href="/css/ngoviewpage.css" />
-<link rel="stylesheet" href="/css/index.css" />
-<title>Ngo View Page</title>
+const app = express();
 
-</head>
+const port = process.env.port||3000;
 
-<body>
+// Defining Paths
+const publicDirectoryPath = path.join(__dirname, '../public');
+const viewsDirectoryPath = path.join(__dirname,'../templates/views');
+const partialsPath = path.join(__dirname,'../templates/partials');
 
-    {{>navbar}}
-    <div class="container">
+app.set('view engine','hbs');   
+app.set('views',viewsDirectoryPath);
+app.use(express.static(publicDirectoryPath));
+hbs.registerPartials(partialsPath);
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+app.use(cookieParser());
+
+
+app.get("/",(req,res)=>{
+    res.render('index.hbs');
+});
+
+app.get("/choicepage",(req,res)=>{
+    res.render('choicepage.hbs');
+});
+
+app.get("/ngoregister",(req,res)=>{
     
+    res.render('ngoregister.hbs');
 
-        <div class="inner_box">
-            <div class="heading">
-                <div class="icon">  <img src="/img/startingphoto.png"></div>
-                <div class="name">  <h1 > Name of the Ngo</h1>
-                                    <p class="bio"> Our view and goal is to remove hunger. </p>
-                                    
-                </div>
-
-                <table class="info">
-                    <tr>
-                        <td><i class="fa fa-phone" aria-hidden="true"></i> &nbsp 120-234568</td>
-                        <td><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp ngo_name@gmail.com </td>
-                        <td><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp cityname country </td>
-                        <td><i class="fa fa-comment" aria-hidden="true"></i> &nbsp other details</td>
-                    </tr>
-                </table>
+});
 
 
-                <p></p>
-                <p></p>
-                <p></p>
-
-                <table>
-                    <tr>
-                        <td>
-                        <div class="bar">
-                            <div class="restaurant_icon">  <img src="/img/startingphoto.png"></div>
-                            <div class="meta_restaurant">  
-                                <h4>Name of the Restaurant</h4>
-                                <p>Availabilty of the following food with upto 5 plates per person each.
-                                    A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
-                                    down to eat it. It is also a place where people go to enjoy the time and to eat a meal. 
-                                    Some restaurants are a chain, meaning that there are restaurants which have the same name and serve the same food. </p>
-                            </div>
-
-                        </div>
-                    </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="bar">
-                                <div class="restaurant_icon">  <img src="/img/startingphoto.png"></div>
-                                <div class="meta_restaurant">  
-                                    <h4>Name of the Restaurant</h4>
-                                    <p>Availabilty of the following food with upto 5 plates per person each.
-                                        A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
-                                        down to eat it. It is also a place where people go to enjoy the time and to eat a meal. 
-                                        Some restaurants are a chain, meaning that there are restaurants which have the same name and serve the same food. </p>
-                                </div>
+app.get("/aboutus",(req,res)=>{
     
-                            </div>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="bar">
-                                <div class="restaurant_icon">  <img src="/img/startingphoto.png"></div>
-                                <div class="meta_restaurant">  
-                                    <h4>Name of the Restaurant</h4>
-                                    <p>Availabilty of the following food with upto 5 plates per person each.
-                                        A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
-                                        down to eat it. It is also a place where people go to enjoy the time and to eat a meal. 
-                                        Some restaurants are a chain, meaning that there are restaurants which have the same name and serve the same food. </p>
-                                </div>
+    res.render('aboutus.hbs');
+
+});
+
+app.get("/news",(req,res)=>{
     
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+    res.render('news.hbs');
 
+});
 
-    </div>
+app.get("/ngoviewpage",(req,res)=>{
+    
+    res.render('ngoviewpage.hbs');
 
-    {{>footer}}
+});
 
-</body>
-</html>
+app.post("/ngoregister",async(req,res)=>{
+    const ngoUser = new NgoUser({
+        ngoName:req.body.ngoName,
+        ngoAdminName:req.body.adminName,
+        ngoEmail:req.body.email,
+        ngoPassword:req.body.password
+    });
+
+    try{
+        const token = await ngoUser.generateAuthToken();
+        // ngoUser.tokens = ngoUser.tokens.concat({token});
+        await ngoUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/ngoViewPage");
+    }
+    catch(e){
+        res.status(500).send(e);
+    }
+    // console.log("NGO Name is " + req.body.ngoName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
+
+});
+
+app.get("/restaurantRegisterPage",(req,res)=>{
+    res.render('restaurantRegisterPage.hbs');
+});
+
+app.post("/restaurantRegisterPage",async(req,res)=>{
+    const restaurantUser = new RestaurantUser({
+        restaurantName: req.body.restaurantName,
+        restaurantAdminName: req.body.adminName,
+        restaurantLocation: req.body.location,
+        restaurantEmail: req.body.email,
+        restaurantPassword: req.body.password
+    });
+
+    try{
+        const token = await restaurantUser.generateAuthToken();
+        // restaurantUser.tokens = restaurantUser.tokens.concat({token});
+        await restaurantUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/restaurantViewPage");
+    }
+    catch(e){
+        res.status(500).send(e);
+    }
+    // console.log("Restaurant Name is " + req.body.restaurantName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
+});
+
+app.get("/ngoLogin",(req,res)=>{
+    res.render('ngoLogin');
+});
+
+app.post("/ngoLogin", async(req,res)=>{
+    try{
+        const ngoUser = await NgoUser.findByCredentials(req.body.email,req.body.password);
+        const token = await ngoUser.generateAuthToken();
+        // ngoUser.tokens = ngoUser.tokens.concat({token});
+        // await ngoUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/ngoViewPage");
+    }
+    catch(e){
+        res.redirect("/choicepage");
+    }
+});
+
+app.get("/restaurantLogin",(req,res)=>{
+    res.render('restaurantLogin');
+})
+
+app.post("/restaurantLogin", async(req,res)=>{
+    try{
+        const restaurantUser = await RestaurantUser.findByCredentials(req.body.email,req.body.password);
+        const token = await restaurantUser.generateAuthToken();
+        // restaurantUser.tokens = restaurantUser.tokens.concat({token});
+        // await restaurantUser.save();
+        res.cookie("jwt",token, {
+            expires: new Date(Date.now() + 6000000),
+            httpOnly: true
+        });
+        res.redirect("/restaurantViewPage");
+    }
+    catch(e){
+        res.redirect("/choicepage");
+    }
+});
+
+app.get("/ngoViewPage",auth,(req,res)=>{
+    res.render("ngoViewPage");
+});
+
+app.get("/restaurantViewPage",auth,(req,res)=>{
+    res.render("restaurantViewPage");
+})
+
+app.post("/logout",(req,res)=>{
+    try{
+        res.clearCookie("jwt");
+        res.redirect("/");
+    }
+    catch(e){
+        res.send("Error in loggin out!");
+    }
+});
+
+app.listen(port,()=>{
+    console.log("Server is up and running on port " + port + ".");
+});
