@@ -1,0 +1,45 @@
+body{
+    background-color:black;
+
+}
+
+h3{
+    text-align:center;
+    color:white;
+    margin:5vh;
+}
+
+td img{
+
+    border-radius:50%;
+    height:20vh;
+    width:20vh;
+}
+
+.odd{
+    background-color:white;
+    border-radius: 12px;
+    padding:5px;
+    display:flex;
+
+}
+
+.even{
+    background-color:#FDD400;
+    border-radius: 12px;
+    padding:5px;
+    display:flex;
+}
+
+.restaurant_icon img{
+    border:none;
+    width:20vh;
+    height:20vh;
+    margin: 2em;
+
+}
+
+.meta_restaurant{
+    text-align:left;
+    margin:2em;
+}

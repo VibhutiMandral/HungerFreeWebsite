@@ -19,3 +19,14 @@ ul li {
     text-decoration: none;
     list-style-type: none;
 }
+
+li a{
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: black;
+}

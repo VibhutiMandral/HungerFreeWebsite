@@ -35,6 +35,18 @@ app.get("/ngoregister",(req,res)=>{
 
 });
 
+app.get("/aboutus",(req,res)=>{
+    
+    res.render('aboutus.hbs');
+
+});
+
+app.get("/news",(req,res)=>{
+    
+    res.render('news.hbs');
+
+});
+
 app.get("/ngoviewpage",(req,res)=>{
     
     res.render('ngoviewpage.hbs');
