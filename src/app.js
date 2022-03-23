@@ -42,6 +42,26 @@ app.get("/ngoregister",(req,res)=>{
 
 });
 
+
+app.get("/aboutus",(req,res)=>{
+    
+    res.render('aboutus.hbs');
+
+});
+
+app.get("/news",(req,res)=>{
+    
+    res.render('news.hbs');
+
+});
+
+app.get("/ngoviewpage",(req,res)=>{
+    
+    res.render('ngoviewpage.hbs');
+
+});
+
+=======
 app.post("/ngoregister",async(req,res)=>{
     const ngoUser = new NgoUser({
         ngoName:req.body.ngoName,
@@ -64,6 +84,7 @@ app.post("/ngoregister",async(req,res)=>{
         res.status(500).send(e);
     }
     // console.log("NGO Name is " + req.body.ngoName +". Admin name is "+req.body.adminName+". Email is "+req.body.email+". Password is "+req.body.password);
+
 });
 
 app.get("/restaurantRegisterPage",(req,res)=>{

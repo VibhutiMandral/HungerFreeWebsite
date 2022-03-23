@@ -19,3 +19,19 @@ ul li {
     text-decoration: none;
     list-style-type: none;
 }
+
+li a{
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+a:link, a:visited {
+    color: black;
+}
+
+li a:hover{
+    text-decoration:none;
+    color:white;
+}
