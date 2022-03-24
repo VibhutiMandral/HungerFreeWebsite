@@ -17,7 +17,7 @@ body {
 .wasting-food h2 {
   margin:10%;
   font-family:Roboto;
-  font-size:3em;
+  font-size:2em;
 }
 
 .sharing {
@@ -34,7 +34,7 @@ body {
   width: 30%;
   padding: 4%;
   padding-left: 0;
-  border-radius: 12%;
+  border-radius: 45%;
   transform: rotate(7deg);
   float: left;
   margin:2%;
@@ -132,7 +132,7 @@ ul li {
 
 .coll p{
   margin:5%;
-  font-size:3em;
+  font-size:2em;
   font-family: roboto;
 
   
