@@ -6,7 +6,28 @@
     height:100%;
     background-size:100%;
     overflow:hidden;
+    top:0;
 
+}
+
+body{
+    background-color: black;
+}
+
+.coll{
+    display:flex;
+    justify-content:center;
+    background-color:white;
+    height:100vh;
+    width:100%;
+
+
+}
+
+
+
+.coll img:hover{
+    transform:scale(1.1);
 }
 
 .company_heading{
@@ -45,6 +66,8 @@
     float:right;
 }
 
+
+
 .plain_text{
     color:white;
     text-align: center;
@@ -71,5 +94,38 @@
     margin-left: auto;
     margin-right: auto;
   
+    
+}
+
+
+.showcase{
+    position:absolute;
+    width:100%;
+    min-height:100vh;
+    width:100%;
+    padding:100px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background-color: #111;
+    color:white;
+    z-index:2;
+}
+
+video{
+   
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:1;
+}
+
+.text{
+    text-align:center;
+    color:white;
+    font-size:3em;
+    font-weight:bold;
+
     
 }

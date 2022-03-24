@@ -35,3 +35,37 @@ li a:hover{
     text-decoration:none;
     color:white;
 }
+
+.menu-btn{
+    background-color: green;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+}
+
+.list{
+    display:none;
+    position:absolute;
+    background-color: #FDD400;
+    padding:1em;
+    font-family:roboto;
+    z-index:20;
+    border-radius: 5px;
+    box-shadow:2px;
+}
+
+.open-menu{
+    display:inline-block;
+}
+
+.open-menu:hover .list{
+    display:block;
+    transform:scale(1.03);
+}
+.menu-btn:hover{
+    color:white;
+}
+
+
+

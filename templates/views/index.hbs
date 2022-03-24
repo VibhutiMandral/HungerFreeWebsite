@@ -30,8 +30,7 @@
         </h1>
       </div>
     </div>
-    </div>
-
+    
     <section class="counting_no_section">
       <div class="counter-container">
         <div class="counter">
@@ -48,17 +47,23 @@
         </div>
       </div>
     </section>
+
+
   </section>
   <!-- collage-->
 
   <div class="coll">
-    <img src="img/hungry_kid.jpg" />
-    <p>
-      The statistics are depressing. Every ninth person in the world ishungry,
+    <img src="img/coll.png" />
+    
+    <p >
+      Every ninth person in the world is hungry,
       according to the World Food Programme. A staggering 800 Million People
       in the world go to the bed hungry every day, based on an estimated world
-      population of 7.6 Billion.</p>
+      population of 7.6 Billion.
+    </p>
   </div>
+
+
   <section class="wasting-food">
     <img src="img/wasting-food-img.png" alt="wasting food img" />
     <h2>
@@ -67,6 +72,9 @@
       could have filled their stomach.
     </h2>
   </section>
+
+
+
   <section class="quote">
     <p>"We know that a peaceful world cannot exist one-third rich and two-thirds hungry."</p>
 
@@ -87,6 +95,17 @@
     </p>
 
   </section>
+
+  
+
+  <!-- <section class="showcase">
+  <video src="/video/ok.mp4" muted loop autoplay ></video>
+  <div class="overlay"></div>
+  <div class="container text">
+    <p>Lets make our world hunger free</p>
+    <p>Together We Can</p>
+  </div>
+  </section> -->
 
 
   <!-- Footer of the project -->
@@ -157,8 +176,8 @@
   <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   <script type="text/javascript">
     $('div').mousemove(function(a){
-    var mouseX =  (a.pageX/-1/300);
-    var mouseY =  (a.pageY/-1/200);
+    var mouseX =  (a.pageX*-1/300);
+    var mouseY =  (a.pageY*-1/200);
     $(this).css('background-position',mouseX+'px '+mouseY+'px ')
   })</script>
 

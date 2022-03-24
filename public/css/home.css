@@ -10,32 +10,34 @@ body {
 }
 
 .wasting-food img {
-  margin-left: 5%;
+  margin: 5%;
   float: right;
 }
 
 .wasting-food h2 {
-  margin:2em;
+  margin:10%;
   font-family:Roboto;
   font-size:3em;
 }
 
 .sharing {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin:2em;
+
+  
   padding:2em;
+  background-color: white;
+  height:70vh;
   
 }
 
 .sharing img {
   
-  width: 45%;
+  width: 30%;
   padding: 4%;
   padding-left: 0;
-  border-radius: 35%;
-  transform: rotate(10deg);
+  border-radius: 12%;
+  transform: rotate(7deg);
   float: left;
+  margin:2%;
 }
 
 .sharing h2 {
@@ -49,7 +51,7 @@ body {
   font-family:roboto;
   word-wrap: break-word;
   font-size:2em;
-  margin:2em;
+  
 }
 
 /* navbar-css */
@@ -112,7 +114,7 @@ ul li {
 }
 .counter-container h6{
   font-family: roboto;
-  font-align:center;
+  
 }
 
 /*coll*/
@@ -121,19 +123,16 @@ ul li {
   width: 600px;
   height: 400px;
   position: relative;
-  margin: 200px auto;
-  background-color: black; 
- font-family: "Sacramento";
- text-size:7rem;
- font-weight:bold;
-
+  font-family: "roboto";
 }
 .coll img {
-  width: 600px;
-  height: 400px;
+  height:80vh;
+  margin:5%;
 }
-.text {
-  color: black;
-  font-size: 20;
-  position: absolute;
+
+.coll p{
+  margin:5%;
+  font-size:3em;
+  font-family: roboto;
+  
 }
