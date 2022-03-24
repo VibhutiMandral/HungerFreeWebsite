@@ -21,6 +21,10 @@ body{
   margin-right:2%;
 }
 
+.form-box:hover{
+  transform:scale(1.01);
+}
+
 .box {
   width: 70%;
   margin-left:auto;
@@ -48,4 +52,11 @@ body{
   margin-top: 25%;
   background-color:black;
   font-weight: bold;
+}
+
+.button:hover{
+  background-color:white;
+  color:black;
+  border-color:rgb(131, 194, 15);
+  transform:scale(1.2);
 }
