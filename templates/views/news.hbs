@@ -2,15 +2,58 @@
 
 <!-- styleSheet -->
 <link rel="stylesheet" href="/css/navbar.css" />
-<link rel="stylesheet" href="/css/ngoviewpage.css" />
+<link rel="stylesheet" href="/css/news.css" />
 <link rel="stylesheet" href="/css/index.css" />
-<title>Ngo View Page</title>
+<title>News</title>
 
 </head>
 
 <body>
 
     {{>navbar}}
+{{!-- 
+<!-- Header -->
+<div class="header">
+  <h1>What's happening around the world</h1>
+</div>
+     --}}
+<section class="news pt-0">
+  <div class="container mt-md-5">
+    <h2 class="mx-4 my-0 text-center" style="color: #FDD400;">Take a look at what's happening around the world</h2>
+    <ul class="row d-lg-flex list-unstyled image-block justify-content-center px-lg-0 mx-lg-0">
+      <li class="col-lg-4 col-md-5 image-block full-width p-3">
+        <div class="image-block-inner">
+          <a class="mh-100" href="#">
+            <img src="img/united_nations.jpg" alt="United Nations" class="img-responsive w-100"></a>
+          <span class="hp-posts-cat">Towards a better future</span>
+          <h4 class="mt-3"><a href="https://sdgs.un.org/goals">United Nations 17 Sustainable Development Goals</a></h4>
+          <!--  <p></p> -->
+          <a href="https://sdgs.un.org/goals" class="read-more">Read more ></a>
+        </div><!-- .image-block-inner -->
+      </li>
+      <li class="col-lg-4 col-md-5 image-block full-width p-3">
+        <div class="image-block-inner">
+          <a class="mh-100" href="#">
+            <img src="img/world_food_day.jpg" alt="World Food Day" class="img-responsive w-100"></a>
+          <span class="hp-posts-cat">Days to Care</span>
+          <h4 class="mt-3"><a href="https://www.timesnownews.com/business-economy/industry/article/world-food-day-2020-how-food-waste-affects-the-economy/667896">World Food Day : How Food wastage effects the World!</a></h4>
+          <!--  <p></p> -->
+          <a href="https://www.timesnownews.com/business-economy/industry/article/world-food-day-2020-how-food-waste-affects-the-economy/667896" class="read-more">Read more ></a>
+        </div><!-- .image-block-inner -->
+      </li>
+      <li class="col-lg-4 col-md-5 image-block full-width p-3">
+        <div class="image-block-inner">
+          <a class="mh-100" href="#">
+            <img src="img/FOODWASTAGE.jpg" alt="food Wastage" class="img-responsive w-100"></a>
+          <span class="hp-posts-cat">Why do we all hide from REALITY?</span>
+          <h4 class="mt-3"><a href="https://www.bbc.com/news/science-environment-56271385">Food waste: Amount thrown away totals 900 million tonnes</a></h4>
+          <!--  <p></p> -->
+          <a href="https://www.bbc.com/news/science-environment-56271385" class="read-more">Read more ></a>
+        </div><!-- .image-block-inner -->
+      </li>
+    </ul>
+  </div>
+</section>
 
 </body>
 </html>
