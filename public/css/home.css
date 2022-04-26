@@ -43,7 +43,9 @@ body {
   padding: 4%;
   padding-left: 0;
   border-radius: 45%;
+
   transform: rotate(14deg);
+
   float: left;
   margin:2%;
 }
