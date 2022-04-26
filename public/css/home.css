@@ -11,13 +11,21 @@ body {
 
 .wasting-food img {
   margin: 5%;
+
+  height:60vh;
+
   float: right;
 }
+
+.wasting-food img:hover{
+  transform:scale(1.1);
+}
+
 
 .wasting-food h2 {
   margin:10%;
   font-family:Roboto;
-  font-size:3em;
+  font-size:2em;
 }
 
 .sharing {
@@ -34,8 +42,8 @@ body {
   width: 30%;
   padding: 4%;
   padding-left: 0;
-  border-radius: 12%;
-  transform: rotate(7deg);
+  border-radius: 45%;
+  transform: rotate(14deg);
   float: left;
   margin:2%;
 }
@@ -50,7 +58,7 @@ body {
 .sharing p{
   font-family:roboto;
   word-wrap: break-word;
-  font-size:2em;
+  font-size:1.5em;
   
 }
 
@@ -100,6 +108,7 @@ ul li {
   width: 100%;
   margin: auto;
 }
+
 .counter-container {
   display: flex;
   justify-content: space-around;
@@ -112,6 +121,7 @@ ul li {
 .counter-container b{
   font-size: 3em;
 }
+
 .counter-container h6{
   font-family: roboto;
   
@@ -132,7 +142,7 @@ ul li {
 
 .coll p{
   margin:5%;
-  font-size:3em;
+  font-size:2em;
   font-family: roboto;
 
   
