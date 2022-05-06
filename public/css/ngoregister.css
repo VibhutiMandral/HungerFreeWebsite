@@ -35,9 +35,9 @@ a{
     color: var(--primary-blue);
 }
 
-a:hover{
+/* a:hover{
     text-decoration:underline;
-}
+} */
 
 .small{
     font-size:80%;
