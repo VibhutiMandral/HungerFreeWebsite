@@ -37,9 +37,10 @@ a:hover {
   text-decoration: none;
 }
 
-li:hover{
+.news li:hover{
   transform:scale(1.1);
 }
+
 
 .image-block li>.image-block-inner>a {
   display: block;
