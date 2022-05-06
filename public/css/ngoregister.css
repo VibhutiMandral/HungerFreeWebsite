@@ -35,10 +35,6 @@ a{
     color: var(--primary-blue);
 }
 
-/* a:hover{
-    text-decoration:underline;
-} */
-
 .small{
     font-size:80%;
     text-align: center;
