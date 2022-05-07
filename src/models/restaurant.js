@@ -7,7 +7,13 @@ const restaurantUserSchema = new mongoose.Schema({
     restaurantAdminName: String,
     restaurantLocation: String,
     restaurantEmail: String,
-    restaurantPassword: String
+    restaurantPassword: String,
+    food:[{
+        foodName: String,
+        foodType: String,
+        foodQuantity: Number,
+        foodDescription: String
+    }]
     // ,tokens:[{
     //     token:{
     //         type: String,

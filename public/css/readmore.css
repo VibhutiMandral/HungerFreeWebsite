@@ -77,3 +77,11 @@ body{
     padding-top:10vh;
     height:180px;
 }
+
+.form{
+    margin-right: 50px;
+    background-color: #FDD400;
+    padding:50px;
+    border-radius: 15px;
+    height:80%;
+}
