@@ -169,6 +169,13 @@ app.post("/logout",(req,res)=>{
     }
 });
 
+
+// Read More Route
+app.get("/readmore",auth,(req,res)=>{
+    res.render("restaurantopen");
+});
+
+
 app.listen(port,()=>{
     console.log("Server is up and running on port " + port + ".");
 });
