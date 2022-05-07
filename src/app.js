@@ -43,11 +43,11 @@ app.get("/choicepage",(req,res)=>{
 });
 
 app.get("/aboutus",(req,res)=>{
-    res.render('aboutus.hbs',normal);
+    res.render('aboutus.hbs',navbar);
 });
 
 app.get("/news",(req,res)=>{ 
-    res.render('news.hbs',normal);
+    res.render('news.hbs',navbar);
 
 });
 
@@ -163,6 +163,7 @@ app.get("/ngoViewPage",ngoAuth,async(req,res)=>{
 
 
     //passing navbar.normal in single object as normal
+    navbar.normal = false;
     res.render("ngoViewPage",{
         ngoName: req.ngoUser.ngoName,
         ngoEmail: req.ngoUser.ngoEmail,
