@@ -32,8 +32,8 @@
 
                     <td>
                         <div class="space">
-                            <h1 > Robinhood NGO </h1>
-                            <p class="bio"> <i class="fa-solid fa-location-pin"></i> &nbsp www.robinhood.com</p>
+                            <h1 >{{ngoName}}</h1>
+                            <p class="bio"> <i class="fa-solid fa-location-pin"></i> &nbsp {{ngoEmail}}</p>
                             <p class="bio"> <i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342 </p>
                         </div>
                     </td>
@@ -43,26 +43,29 @@
 
             
                 <!-- add loop in the table instead of the rows otherwise there will be an issue in the spacing between the rows-->
-                <table class="spacing">
-                    <tr >
-                        <td>
-                            <div class="bar">
-                                <div class="restaurant_icon">  
-                                    <img src="/img/startingphoto.png">
+                
+                {{#each restaurantArray}}
+                    <table class="spacing">
+                        <tr >
+                            <td>
+                                <div class="bar">
+                                    <div class="restaurant_icon">  
+                                        <img src="/img/startingphoto.png">
+                                    </div>
+                                    <div class="meta_restaurant">  
+                                            <h4> {{this.restaurantName}} </h4>
+                                            <p> Availabilty of the following food with upto 5 plates per person each.
+                                            A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
+                                            down to eat it. It is also a place where people go to enjoy the time and to eat a meal. </p>
+                                            <table><tr><td><i class="fa-solid fa-location-pin"></i> &nbsp {{this.restaurantEmail}} </td><td>&nbsp<i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342 </td></tr></table>
+                                            <a href="/readmore" > Read More </a>
+                                    
+                                    </div>
                                 </div>
-                                <div class="meta_restaurant">  
-                                        <h4> Name of the Restaurant </h4>
-                                        <p> Availabilty of the following food with upto 5 plates per person each.
-                                        A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
-                                        down to eat it. It is also a place where people go to enjoy the time and to eat a meal. </p>
-                                        <table><tr><td><i class="fa-solid fa-location-pin"></i> &nbsp www.robinhood.com </td><td>&nbsp<i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342 </td></tr></table>
-                                        <a href="/readmore" > Read More </a>
-                                   
-                                </div>
-                            </div>
-                        </td>
-                    </tr>   
-                </table>
+                            </td>
+                        </tr>   
+                    </table>
+                {{/each}}
                 
                 
         </div>

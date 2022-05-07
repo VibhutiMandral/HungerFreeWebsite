@@ -151,8 +151,15 @@ app.post("/restaurantLogin", async(req,res)=>{
     }
 });
 
-app.get("/ngoViewPage",auth,(req,res)=>{
-    res.render("ngoViewPage");
+app.get("/ngoViewPage",auth,async(req,res)=>{
+
+    const restaurantArray = await RestaurantUser.find();
+
+    res.render("ngoViewPage",{
+        ngoName: req.ngoUser.ngoName,
+        ngoEmail: req.ngoUser.ngoEmail,
+        restaurantArray 
+    });
 });
 
 app.get("/restaurantViewPage",auth,(req,res)=>{
