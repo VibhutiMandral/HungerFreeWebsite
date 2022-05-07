@@ -29,31 +29,30 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(cookieParser());
 
+let navbar = {
+    normal: true
+};
 
 app.get("/",(req,res)=>{
-    res.render('index.hbs');
+
+    res.render('index.hbs',navbar);
 });
 
 app.get("/choicepage",(req,res)=>{
-    res.render('choicepage.hbs');
+    res.render('choicepage.hbs',navbar);
+});
+
+app.get("/aboutus",(req,res)=>{
+    res.render('aboutus.hbs',normal);
+});
+
+app.get("/news",(req,res)=>{ 
+    res.render('news.hbs',normal);
+
 });
 
 app.get("/ngoregister",(req,res)=>{
-    
-    res.render('ngoregister.hbs');
-
-});
-
-
-app.get("/aboutus",(req,res)=>{
-    
-    res.render('aboutus.hbs');
-
-});
-
-app.get("/news",(req,res)=>{
-    
-    res.render('news.hbs');
+    res.render('ngoregister.hbs',navbar);
 
 });
 
@@ -73,6 +72,8 @@ app.post("/ngoregister",async(req,res)=>{
             expires: new Date(Date.now() + 6000000),
             httpOnly: true
         });
+
+        // adding second type of navbar
         res.redirect("/ngoViewPage");
     }
     catch(e){
@@ -83,7 +84,7 @@ app.post("/ngoregister",async(req,res)=>{
 });
 
 app.get("/restaurantRegisterPage",(req,res)=>{
-    res.render('restaurantRegisterPage.hbs');
+    res.render('restaurantRegisterPage.hbs',navbar);
 });
 
 app.post("/restaurantRegisterPage",async(req,res)=>{
@@ -103,6 +104,7 @@ app.post("/restaurantRegisterPage",async(req,res)=>{
             expires: new Date(Date.now() + 6000000),
             httpOnly: true
         });
+
         res.redirect("/restaurantViewPage");
     }
     catch(e){
@@ -112,7 +114,7 @@ app.post("/restaurantRegisterPage",async(req,res)=>{
 });
 
 app.get("/ngoLogin",(req,res)=>{
-    res.render('ngoLogin');
+    res.render('ngoLogin',navbar);
 });
 
 app.post("/ngoLogin", async(req,res)=>{
@@ -125,6 +127,7 @@ app.post("/ngoLogin", async(req,res)=>{
             expires: new Date(Date.now() + 6000000),
             httpOnly: true
         });
+
         res.redirect("/ngoViewPage");
     }
     catch(e){
@@ -133,7 +136,7 @@ app.post("/ngoLogin", async(req,res)=>{
 });
 
 app.get("/restaurantLogin",(req,res)=>{
-    res.render('restaurantLogin');
+    res.render('restaurantLogin',navbar);
 })
 
 app.post("/restaurantLogin", async(req,res)=>{
@@ -146,6 +149,7 @@ app.post("/restaurantLogin", async(req,res)=>{
             expires: new Date(Date.now() + 6000000),
             httpOnly: true
         });
+
         res.redirect("/restaurantViewPage");
     }
     catch(e){
@@ -157,20 +161,26 @@ app.get("/ngoViewPage",ngoAuth,async(req,res)=>{
 
     const restaurantArray = await RestaurantUser.find();
 
+
+    //passing navbar.normal in single object as normal
     res.render("ngoViewPage",{
         ngoName: req.ngoUser.ngoName,
         ngoEmail: req.ngoUser.ngoEmail,
-        restaurantArray 
+        restaurantArray,
+        normal: false 
     });
 });
 
 app.get("/restaurantViewPage",restaurantAuth,(req,res)=>{
-    res.render("restaurantViewPage");
+    navbar.normal = false;
+    res.render("restaurantViewPage",navbar);
 })
 
 app.post("/logout",(req,res)=>{
     try{
         res.clearCookie("jwt");
+
+        navbar.normal = true;
         res.redirect("/");
     }
     catch(e){
@@ -181,7 +191,9 @@ app.post("/logout",(req,res)=>{
 
 // Read More Route
 app.get("/readmore",ngoAuth,(req,res)=>{
-    res.render("restaurantopen");
+
+    navbar.normal = false;
+    res.render("restaurantopen",navbar);
 });
 
 
