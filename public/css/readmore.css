@@ -8,8 +8,13 @@ body{
     display:flex;
 }
 
+.newheading{
+    margin:1vh;
+}
 .heading{
     margin:10vh;
+    margin-top:30vh;
+    margin-left:18vh;
 }
 .inner_box{
     background-color:white;
@@ -67,5 +72,8 @@ body{
 }
 
 .cover{
-    background-color:aliceblue;
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding-top:10vh;
+    height:180px;
 }
