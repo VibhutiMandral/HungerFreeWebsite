@@ -2,7 +2,12 @@ body {
   padding: 0;
   margin: 0;
 }
-
+h1{
+            text-align: right;
+            padding:1em;
+            color:#FDD400;
+            font-size: 12vh;
+}
 .wasting-food {
   background-color: black;
   color: white;
@@ -134,7 +139,6 @@ ul li {
 .coll {
   width: 600px;
   height: 400px;
-  position: relative;
   font-family: "roboto";
 }
 .coll img {
@@ -146,6 +150,90 @@ ul li {
   margin:5%;
   font-size:2em;
   font-family: roboto;
+}
 
+
+@media only screen and (max-width: 992px) {
+  h1{
+    font-size:9vh;
+    padding:100px;
+  }
+
+  .wasting-food h2 {
+    margin:10%;
+    font-family:Roboto;
+    font-size:20px;
+  }
+
+  .coll img {
+    height:50vh;
+    margin:3%;
+  }
   
+  .coll p{
+    margin:5%;
+    font-size:30px;
+    font-family: roboto;
+  }
+
+  .coll {
+    width: 666px;
+    height: 300px;
+    font-family: "roboto";
+  }
+  
+  .counter-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30px;
+    color: rgb(245, 211, 18);
+    padding:3em;
+  }
+  
+  .counter-container b{
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 973px) {
+  h1{
+    font-size:7vh;
+    padding:50px;
+  }
+  .coll p{
+    margin:5%;
+    font-size:12px;
+    font-family: roboto;
+  }
+  .coll {
+    width: 666px;
+    height: auto;
+    font-family: "roboto";
+  }
+
+}
+
+@media only screen and (max-width: 612px) {
+  h1{
+    font-size:7vh;
+    padding:50px;
+  }
+  .coll img {
+    height:50vh;
+    width:auto;
+    margin-top:5%;
+  }
+  
+  .coll p{
+    margin:5%;
+    font-size:15px;
+    font-family: roboto;
+  }
+
+  .coll {
+    width: 666px;
+    height: auto;
+    font-family: "roboto";
+  }
 }

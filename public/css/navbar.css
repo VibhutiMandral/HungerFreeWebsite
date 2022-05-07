@@ -5,7 +5,7 @@
     font-family:Rubik Mono One;
     float:left;
     color:black;
-    font-size:1.1em;
+    
 }
 .keys li{
     padding:0em 1em 0em 1em;
@@ -67,5 +67,30 @@ li a:hover{
     color:white;
 }
 
+@media only screen and (max-width: 992px) {
+    .logo{
+        font-size:10px;
+    }
+    .keys li{
+        font-size:10px;
+    }
+  }
 
+  @media only screen and (max-width: 768px) {
+    .logo{
+        font-size:7px;
+    }
+    .keys li{
+        font-size:7px;
+    }
+  }
 
+  @media only screen and (max-width: 541px) {
+    .logo{
+        font-size:5px;
+        font-weight: lighter;
+    }
+    .keys li{
+        font-size:5px;
+    }
+  }
