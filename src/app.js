@@ -7,6 +7,8 @@ const NgoUser = require('./models/ngo');
 const RestaurantUser = require('./models/restaurant');
 const cookieParser = require('cookie-parser');
 const auth = require('./middleware/auth');
+const ngoAuth = require('./middleware/ngoAuth');
+const restaurantAuth = require('./middleware/restaurantAuth');
 const res = require('express/lib/response');
 
 const app = express();
@@ -151,7 +153,7 @@ app.post("/restaurantLogin", async(req,res)=>{
     }
 });
 
-app.get("/ngoViewPage",auth,async(req,res)=>{
+app.get("/ngoViewPage",ngoAuth,async(req,res)=>{
 
     const restaurantArray = await RestaurantUser.find();
 
@@ -162,7 +164,7 @@ app.get("/ngoViewPage",auth,async(req,res)=>{
     });
 });
 
-app.get("/restaurantViewPage",auth,(req,res)=>{
+app.get("/restaurantViewPage",restaurantAuth,(req,res)=>{
     res.render("restaurantViewPage");
 })
 
@@ -178,7 +180,7 @@ app.post("/logout",(req,res)=>{
 
 
 // Read More Route
-app.get("/readmore",auth,(req,res)=>{
+app.get("/readmore",ngoAuth,(req,res)=>{
     res.render("restaurantopen");
 });
 
