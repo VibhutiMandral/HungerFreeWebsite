@@ -3,6 +3,7 @@
         <div class="logo"><strong><a href="/">HungerFree</a></strong></div>
         <div class="keys">
             <ul>
+                {{#if normal}}
                 <li>
                 <a href="/choicepage"><button style="
                   background-color: black;
@@ -14,6 +15,7 @@
                         </button></a>
                 </li>
 
+                    
                 <li>
                     <div class="open-menu">
                         <button class="menu-btn">
@@ -27,6 +29,19 @@
                         </div>
                     </div>
                 </li>
+                
+                
+                
+                
+                {{else}}
+                <li>
+                    <form action="/logout" method="post">
+                        <button type="submit" style="background-color: black; color: white; font-weight: bold; border: none; border-radius: 5px;">
+                            LogOut <i class="fas fa-angle-double-right"></i>
+                        </button>
+                    </form>
+                </li>
+                {{/if}}
                 <li><a href="#share-food">Share Food</a></li>
                 <li><a href="https://hungermap.wfp.org/">Analytics</a></li>
                 <li><a href="/news">News</a></li>
