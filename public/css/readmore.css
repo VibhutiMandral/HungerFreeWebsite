@@ -1,11 +1,14 @@
 body{
     background-color:black;
 }
+
 .bar{
+    width:875px;
     background-color:#FDD400;
     border-radius: 12px;
     padding:5px;
     display:flex;
+
 }
 
 .newheading{

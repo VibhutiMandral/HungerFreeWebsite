@@ -23,7 +23,7 @@
                 <img src="/img/logo.png">
             </div>
             <div class="name">  
-                <h1 >Restaurant Name</h1>
+                <h1 >{{restaurant.restaurantName}} Restaurant</h1>
                 <p class="bio"> Our view and goal is to remove hunger. </p>
             </div>
         </div>
@@ -33,27 +33,27 @@
         <form method="post" action="/addfood" class="form">
             <div class="form-group">
                 <label for="foodName">Food Name</label>
-                <input type="text" class="form-control" id="foodName" placeholder="Enter The Name Of The Food" required>
+                <input type="text" class="form-control" id="foodName" name="foodName" placeholder="Enter The Name Of The Food" required>
             </div>
             <div class="form-group">
                 <label for="foodType">Food Type</label>
                 <br>
                 <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="option1">
+                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="veg" required>
                 <label class="form-check-label" for="inlineRadio1">Vegetarian</label>
                 </div>
                 <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="option2">
+                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="nonveg">
                 <label class="form-check-label" for="inlineRadio1">Non-Vegetarian</label>
                 </div>
             </div>
             <div class="form-group">
-                <label for="quantity">Quantity Of Food in Plates</label>
-                <input type="number" class="form-control" id="quantity" placeholder="Enter The Quantity Of The Food" required>
+                <label for="foodQuantity">Quantity Of Food in Plates</label>
+                <input type="number" class="form-control" id="foodQuantity" name="foodQuantity" placeholder="Enter The Quantity Of The Food" required>
             </div>
             <div class="form-group">
-                <label for="fooddesc">Description Of Food</label>
-                <textarea class="form-control" id="fooddesc" rows="3" required>Enter the description of food</textarea>
+                <label for="foodDesc">Description Of Food</label>
+                <textarea class="form-control" id="foodDesc" rows="3"  id="foodDesc" name="foodDesc" placeholder="Enter the description of food" required></textarea>
             </div>
 
 

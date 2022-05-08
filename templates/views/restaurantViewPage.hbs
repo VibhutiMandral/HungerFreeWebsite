@@ -25,7 +25,7 @@
             <img src="/img/logo.png">
         </div>
         <div class="name">  
-            <h1 >Restaurant Name</h1>
+            <h1 >{{restaurant.restaurantName}} Restaurant</h1>
             <p class="bio"> Our view and goal is to remove hunger. </p>
             <a href="/addfood">
                 <button type="submit" class="btn btn-md btn-warning">Add Food</button>
@@ -39,34 +39,33 @@
         <table class="info">
             <tr>
                 <td><i class="fa fa-phone" aria-hidden="true"></i> &nbsp 120-234568</td>
-                <td><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp santosh@gmail.com </td>
-                <td><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp japan </td>
-                <td><i class="fa fa-comment" aria-hidden="true"></i> &nbsp other details</td>
+                <td><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp {{restaurant.restaurantEmail}} </td>
+                <td><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp {{restaurant.restaurantLocation}} </td>
+                <td><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{restaurant.restaurantAdminName}}</td>
             </tr>
         </table>
 
-        <p></p>
-        <p></p>
-        <p></p>
-
         <table>
-            <tr>
+            {{#each restaurant.food}}
+            <tr class="posts">
                 <td>
                 <div class="bar">
                     <div class="restaurant_icon">  <img src="/img/startingphoto.png"></div>
                     <div class="meta_restaurant">  
-                        <h4>Name of the Food Item</h4>
-                        <p>Availabilty of the following food with upto 5 plates per person each.
-                           also it is a vegetarian type food. Please contact for further details.
-                           <br>
-                           You can also contact us through our web portal.
-                        <a href="/readmore">read more</a> </p>
+                        <h4>{{this.foodName}}</h4>
+                        <br>
+                        <p><strong>Food Type: </strong>{{this.foodType}}</p>
+                        <p><strong>Quantity of food in plates: </strong>{{this.foodQuantity}}</p>
+                        <p><strong>Food Description: </strong>{{this.foodDescription}}</p>
+                        <form action="/deletefood" method="post">
+                            <button class="btn btn-dark btn-sm" name="foodid" type="submit" value={{this._id}} onchange="form.submit()">Delete <i class="fa-solid fa-trash-can"></i></button>
+                        </form>
                     </div>
 
                 </div>
             </td>
             </tr>
-            
+            {{/each}}
         </table>
 
         

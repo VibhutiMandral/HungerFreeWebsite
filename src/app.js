@@ -11,6 +11,7 @@ const ngoAuth = require('./middleware/ngoAuth');
 const restaurantAuth = require('./middleware/restaurantAuth');
 const res = require('express/lib/response');
 const multer = require('multer');
+const ngoUser = require('./models/ngo');
 
 const app = express();
 
@@ -194,9 +195,12 @@ app.get("/ngoViewPage",ngoAuth,async(req,res)=>{
     });
 });
 
-app.get("/restaurantViewPage",restaurantAuth,(req,res)=>{
+app.get("/restaurantViewPage",restaurantAuth,async(req,res)=>{
     navbar.normal = false;
-    res.render("restaurantViewPage",navbar);
+    res.render("restaurantViewPage",{
+        restaurant:req.restaurantUser,
+        normal:false
+    });
 })
 
 app.post("/logout",(req,res)=>{
@@ -216,17 +220,50 @@ app.post("/logout",(req,res)=>{
 app.get("/readmore",ngoAuth,(req,res)=>{
 
     navbar.normal = false;
-    res.render("restaurantopen",navbar);
+    res.render("restaurantopen",{
+        ngo:req.ngoUser,
+        normal:false
+    });
 });
 
 
 app.get("/addfood",restaurantAuth,(req,res)=>{
+
     navbar.normal = false;
-    res.render("addFood",navbar);
+    res.render("addFood",{
+        restaurant:req.restaurantUser,
+        normal:false
+    });
+    
 });
 
-app.post("/addfood",(req,res)=>{
+app.post("/addfood",restaurantAuth,async(req,res)=>{
+    const user = await RestaurantUser.findById({_id:req.restaurantUser._id});
+    user.food = user.food.concat({
+        foodName: req.body.foodName,
+        foodType: req.body.foodType,
+        foodQuantity: req.body.foodQuantity,
+        foodDescription: req.body.foodDesc
+    });
+    await user.save();
+
     res.redirect("/restaurantViewPage");
+});
+
+app.post("/deletefood",restaurantAuth,async(req,res)=>{
+    const foodId = req.body.foodid;
+    const user = await RestaurantUser.findById({
+        _id:req.restaurantUser._id
+    });
+
+    user.food = user.food.filter(function(obj){
+        return obj._id.toString() != foodId;
+    });
+
+    await user.save();
+
+    res.redirect("/restaurantViewPage");
+
 });
 
 app.listen(port,()=>{
