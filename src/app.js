@@ -217,12 +217,14 @@ app.post("/logout",(req,res)=>{
 
 
 // Read More Route
-app.get("/readmore",ngoAuth,(req,res)=>{
-
+app.post("/readmore",ngoAuth,async(req,res)=>{
+    const restaurant = await RestaurantUser.findById({_id:req.body.restaurantid});
     navbar.normal = false;
-    res.render("restaurantopen",{
+    res.render("readmore",{
         ngo:req.ngoUser,
-        normal:false
+        normal:false,
+        food:restaurant.food,
+        restaurant  
     });
 });
 
