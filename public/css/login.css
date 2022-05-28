@@ -23,3 +23,9 @@
 .login-heading{
     font-size:2em;
 }
+
+@media screen and (max-width: 750px) {
+    .login_spacing{
+        width:70%;
+    }
+  }

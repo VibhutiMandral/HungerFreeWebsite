@@ -128,5 +128,8 @@ body {
     }
   }
   
-  /* navbar css */
-  
+  @media screen and (max-width: 600px) {
+    .right{
+      width:100%;
+    }
+  }
