@@ -214,10 +214,34 @@ ul li {
 
 }
 
-@media only screen and (max-width: 612px) {
+@media only screen and (max-width: 700px) {
   h1{
     font-size:7vh;
     padding:50px;
+  }
+  .coll img {
+    height:50vh;
+    width:auto;
+    margin-top:5%;
+  }
+  
+  .coll p{
+    margin:5%;
+    font-size:15px;
+    font-family: roboto;
+  }
+
+  .coll {
+    width: 666px;
+    height: auto;
+    font-family: "roboto";
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  h1{
+    font-size:5vh;
+    padding:30px;
   }
   .coll img {
     height:50vh;
