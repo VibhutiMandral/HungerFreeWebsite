@@ -301,6 +301,9 @@ ul li {
     text-align:center;
     
   }
+  .company_heading{
+      margin:0;
+  }
   
   .coll img {
     height:60vh;
@@ -330,4 +333,8 @@ ul li {
     height: auto;
     font-family: "roboto";
   }
+  .company_heading{
+    margin:0;
+    font-size:7px;
+}
 }

@@ -158,7 +158,8 @@ video{
     }
 
     .company_heading{
-        margin:1em;
+        margin:0;
+        font-size:10px;
     }
     
   }
