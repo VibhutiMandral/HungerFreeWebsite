@@ -7,6 +7,8 @@ body{
     padding:5px;
     display:flex;
     flex-direction: row;
+    width: 80%;
+    /* margin-top: 3em; */
     /* justify-content: center;
     align-items: center; */
 }
@@ -50,8 +52,8 @@ body{
 }
 
 .info{
-    /* padding:1em;
-    margin:1em; */
+    /* padding-top:3em;
+    margin:7em; */
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -102,6 +104,11 @@ p{
     /* width: 80%; */
 }   
 
+/* .newheading
+{
+    margin-bottom: 2em;
+} */
+
 .container-new{
     display: flex;
     align-items: center;
@@ -124,3 +131,12 @@ p{
         align-items: center;
     }
   }
+
+  /* .cover{
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding-top:10vh;
+    height:180px;
+   } */
+
+
