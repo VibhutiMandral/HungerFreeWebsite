@@ -139,7 +139,7 @@ video{
     }
     
   }
-  height:100%;
+  /* height:100%; */
 
   @media only screen and (max-width: 583px) {
    
@@ -159,7 +159,14 @@ video{
 
     .company_heading{
         margin:0;
-        font-size:10px;
+        font-size:1em;
     }
     
+    .break{
+        display:none;
+    }
   }
+
+
+
+ 
