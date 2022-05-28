@@ -138,3 +138,14 @@ video{
     }
     
   }
+
+  
+
+  @media only screen and (max-width: 583px) {
+   
+    .footer_table_design{
+        
+        display:none;
+    }
+    
+  }
