@@ -88,21 +88,20 @@ li a:hover{
 
   @media only screen and (max-width: 541px) {
     .logo{
-        font-size:5px;
+        font-size:7px;
         font-weight: lighter;
     }
     .keys li{
-        font-size:5px;
+        font-size:7px;
     }
   }
 
   @media only screen and (max-width: 465px) {
     .logo{
-        font-size:3px;
-        font-weight: lighter;
+        font-size:5px;
     }
     .keys li{
-        font-size:3px;
+        font-size:5px;
     }
   }
 

@@ -123,6 +123,7 @@ ul li {
   font-size: 2em;
   color: rgb(245, 211, 18);
   padding:3em;
+  flex-direction:row;
 }
 
 .counter-container b{
@@ -135,6 +136,9 @@ ul li {
 }
 
 /*coll*/
+.counter{
+  text-align:center;
+}
 
 .coll {
   width: 600px;
@@ -210,6 +214,35 @@ ul li {
     width: 666px;
     height: auto;
     font-family: "roboto";
+  }
+
+}
+
+
+@media only screen and (max-width: 970px) {
+
+  .counter-container{
+    display: table;
+   /* //flex-wrap: wrap; */
+    
+    flex-direction:column;
+    padding:5px;
+    text-align: center;
+    justify-content:center;
+    
+    
+  }
+
+  .counter{
+    margin:1.5em;
+    text-align: center;
+    align-items:center;
+  }
+
+  .andr{
+    display:flex;
+    align-items:center;
+    justify-content:center;
   }
 
 }
