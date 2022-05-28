@@ -56,9 +56,20 @@ td img:hover{
     transform: scale(1.02);
 }
 
+table{
+    align-items: center;
+    justify-content: center;
+}
+
 @media only screen and (max-width: 900px) {
    
     .show{
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    td img{
         display:none;
     }
 }

@@ -4,8 +4,10 @@
 <link rel="stylesheet" href="/css/navbar.css" />
 <link rel="stylesheet" href="/css/index.css" />
 <link rel="stylesheet" href="/css/readmore.css" />
-<link rel="stylesheet" href="/css/aboutus.css" />
-<title>ReadMore</title>
+{{!-- <link rel="stylesheet" href="/css/aboutus.css" /> --}}
+
+<link rel="stylesheet" href="/css/addfood.css" />
+<title>Add Food</title>
 
 </head>
 
@@ -14,62 +16,60 @@
 
 
   <div class="container">
+    <div class="inner_box" >
+        <section class="cover" >
+            <div class="newheading">
+                <div class="icon">  
+                    <img src="/img/logo.png">
+                </div>
+                <div class="name">  
+                    <h1 >{{restaurant.restaurantName}} Restaurant</h1>
+                    <p class="bio"> Our view and goal is to remove hunger. </p>
+                </div>
+            </div>
+        </section>
 
-  
-  <div class="inner_box" >
-    <section class="cover" >
-        <div class="newheading">
-            <div class="icon">  
-                <img src="/img/logo.png">
-            </div>
-            <div class="name">  
-                <h1 >{{restaurant.restaurantName}} Restaurant</h1>
-                <p class="bio"> Our view and goal is to remove hunger. </p>
-            </div>
+        <div class="heading">
+            <form method="post" action="/addfood" class="form">
+                <div class="form-group">
+                    <label for="foodName">Food Name</label>
+                    <input type="text" class="form-control" id="foodName" name="foodName" placeholder="Enter The Name Of The Food" required>
+                </div>
+                <div class="form-group">
+                    <label for="foodType">Food Type</label>
+                    <br>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="veg" required>
+                    <label class="form-check-label" for="inlineRadio1">Vegetarian</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="nonveg">
+                    <label class="form-check-label" for="inlineRadio1">Non-Vegetarian</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="foodQuantity">Quantity Of Food in Plates</label>
+                    <input type="number" class="form-control" id="foodQuantity" name="foodQuantity" placeholder="Enter The Quantity Of The Food" required>
+                </div>
+                <div class="form-group">
+                    <label for="foodDesc">Description Of Food</label>
+                    <textarea class="form-control" id="foodDesc" rows="3"  id="foodDesc" name="foodDesc" placeholder="Enter the description of food" required></textarea>
+                </div>
+
+
+                {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
+                            <span>Upload Image Of Food</span>
+                            <input name="myImage" type="file">
+                            <input class="file-path validate" type="text">
+                    <button type="submit" class="btn btn-dark btn-sm">Submit</button>
+                </form> --}}
+                
+                
+                <input type="submit" class="btn btn-md btn-dark" value="Add Food"></input>
+            </form>
         </div>
-    </section>
 
-    <div class="heading">
-        <form method="post" action="/addfood" class="form">
-            <div class="form-group">
-                <label for="foodName">Food Name</label>
-                <input type="text" class="form-control" id="foodName" name="foodName" placeholder="Enter The Name Of The Food" required>
-            </div>
-            <div class="form-group">
-                <label for="foodType">Food Type</label>
-                <br>
-                <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="veg" required>
-                <label class="form-check-label" for="inlineRadio1">Vegetarian</label>
-                </div>
-                <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="foodType" id="inlineRadio1" value="nonveg">
-                <label class="form-check-label" for="inlineRadio1">Non-Vegetarian</label>
-                </div>
-            </div>
-            <div class="form-group">
-                <label for="foodQuantity">Quantity Of Food in Plates</label>
-                <input type="number" class="form-control" id="foodQuantity" name="foodQuantity" placeholder="Enter The Quantity Of The Food" required>
-            </div>
-            <div class="form-group">
-                <label for="foodDesc">Description Of Food</label>
-                <textarea class="form-control" id="foodDesc" rows="3"  id="foodDesc" name="foodDesc" placeholder="Enter the description of food" required></textarea>
-            </div>
-
-
-            {{!-- <form action="/upload" method="POST" enctype="multipart/form-data">
-                        <span>Upload Image Of Food</span>
-                        <input name="myImage" type="file">
-                        <input class="file-path validate" type="text">
-                <button type="submit" class="btn btn-dark btn-sm">Submit</button>
-            </form> --}}
-            
-            
-            <input type="submit" class="btn btn-md btn-dark" value="Add Food"></input>
-        </form>
     </div>
-
-</div>
 </div>
 
 </body>
