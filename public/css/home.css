@@ -8,6 +8,7 @@ h1{
             color:#FDD400;
             font-size: 12vh;
 }
+
 .wasting-food {
   background-color: black;
   color: white;
@@ -16,16 +17,14 @@ h1{
 
 .wasting-food img {
   margin: 5%;
-
   height:60vh;
-
   float: right;
+  object-fit:cover;
 }
 
 .wasting-food img:hover{
   transform:scale(1.1);
 }
-
 
 .wasting-food h2 {
   margin:10%;
@@ -33,13 +32,12 @@ h1{
   font-size:2em;
 }
 
-.sharing {
+/* sharing-section */
 
-  
+.sharing {
   padding:2em;
   background-color: white;
   height:70vh;
-  
 }
 
 .sharing img {
@@ -56,7 +54,7 @@ h1{
 }
 
 .sharing h2 {
-  margin-top: 5%;
+  margin-top: 1%;
   font-family: Roboto;
   font-size: 3em;
  
@@ -91,20 +89,21 @@ ul li {
   text-decoration: none;
   list-style-type: none;
 }
+
 /* quote */
 .quote {
-  padding:2em;
+  padding:1em;
   width: auto;
   background-color: #fdd400;
 }
+
 .quote p {
   font-size: 3rem;
   text-align: center;
   padding: 15px;
   font-weight: bold;
-  padding:2em;
+  padding:1em;
   font-family:Sacramento;
-
 }
 
 
@@ -318,7 +317,6 @@ ul li {
   }
   .coll img {
     height:50vh;
-    
     margin-top:5%;
   }
   
@@ -336,5 +334,69 @@ ul li {
   .company_heading{
     margin:0;
     font-size:7px;
+  }
+
+  .quote p{
+    font-size:1.75em;
+  }
 }
+
+
+ /* wasting-food */
+ @media only screen and (max-width: 620px) {
+   
+  .wasting-food-div{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      text-align: center;
+      align-items:center;
+  }
+  
+}
+
+@media only screen and (max-width: 450px) {
+  .wasting-food-div{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      text-align: center;
+      align-items:center;
+  }
+
+  .wasting-food-div img{
+      width: 40%;
+      height: 60%;        
+  }
+  
+}
+
+
+@media only screen and (max-width: 900px) {
+  .sharing{
+      display:flex;
+      flex-direction: column;
+      justify-content:center;
+      text-align: center;
+      align-items:center;
+      height:auto;
+      /* padding:1em; */
+  }
+
+  .sharing img{
+      width: 50%;
+      height: 60%;        
+  }
+
+  .sharing h2{
+    font-family: Roboto;
+    font-size: 2em;
+  }
+  
+  .sharing p{
+    font-family:roboto;
+    word-wrap: break-word;
+    font-size:1.25em;
+  }
+  
 }
