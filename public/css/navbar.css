@@ -6,6 +6,7 @@
     float:left;
     color:black;
     
+    
 }
 .keys li{
     padding:0em 1em 0em 1em;
@@ -94,3 +95,15 @@ li a:hover{
         font-size:5px;
     }
   }
+
+  @media only screen and (max-width: 465px) {
+    .logo{
+        font-size:3px;
+        font-weight: lighter;
+    }
+    .keys li{
+        font-size:3px;
+    }
+  }
+
+

@@ -130,3 +130,11 @@ video{
     
 }
 
+@media only screen and (max-width: 1200px) {
+   
+    .media_handles_design{
+        
+        display:none;
+    }
+    
+  }

@@ -55,3 +55,10 @@ td img:hover{
 .even:hover{
     transform: scale(1.02);
 }
+
+@media only screen and (max-width: 900px) {
+   
+    .show{
+        display:none;
+    }
+}
