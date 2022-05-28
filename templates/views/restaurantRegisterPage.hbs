@@ -17,6 +17,7 @@
       
        
           <section>
+            <form action="/restaurantRegisterPage" method="post"></form>
             <h2 class="heading">Join Us</h2>
             <div class="login-container">
               <p style="text-align:center;">
@@ -24,27 +25,27 @@
               </p>
             </div>
           </section>
-          <form action="/restaurantRegisterPage" method="post">
-          <div class="input-container name">
+          {{!-- <form action="/restaurantRegisterPage" method="post"> --}}
+          <div class="input-container name form-group">
             <label for="restaurantName">Restaurant Name</label>
-            <input id="restaurantName" name="restaurantName" type="text" placeholder="Enter Restaurant Name" required/>
+            <input id="restaurantName" class="form-control" name="restaurantName" type="text" placeholder="Enter Restaurant Name" required/>
           </div>
-          <div class="input-container name">
+          <div class="input-container name form-group">
             <label for="adminName">Admin Name</label>
-            <input id="adminName" name="adminName" type="text" placeholder="Enter Admin Name" required/>
+            <input id="adminName" class="form-control" name="adminName" type="text" placeholder="Enter Admin Name" required/>
           </div>
-          <div class="input-container name">
+          <div class="input-container name form-group">
             <label for="location">Location</label>
-            <input id="location" name="location" type="text" placeholder="Enter Restaurant Location" required/>
+            <input id="location" class="form-control" name="location" type="text" placeholder="Enter Restaurant Location" required/>
           </div>
 
           <div class="input-container name">
-            <label for="email">Email ID</label>
-            <input id="email" name="email" type="email" placeholder="Enter Email" required/>
+            <label for="email" class="form-group">Email ID</label>
+            <input id="email" class="form-control" name="email" type="email" placeholder="Enter Email" required/>
           </div>
           <div class="input-container name">
-            <label for="password">Password</label>
-            <input id="password" name="password" placeholder="Must be atleast 6 characters" type="password" required/>
+            <label for="password" class="form-group">Password</label>
+            <input id="password" class="form-control" name="password" placeholder="Must be atleast 6 characters" type="password" required/>
            <br>
            <br>
           </div>
