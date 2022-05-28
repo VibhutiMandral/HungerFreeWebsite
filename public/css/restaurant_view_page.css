@@ -6,6 +6,9 @@ body{
     border-radius: 12px;
     padding:5px;
     display:flex;
+    flex-direction: row;
+    /* justify-content: center;
+    align-items: center; */
 }
 
 .inbar:hover{
@@ -17,14 +20,18 @@ body{
 }
 
 
-.heading{
-    margin:10vh;
-}
+/* .heading{
+    
+} */
 .inner_box{
     background-color:white;
     border-radius: 12px;
     margin-top:10vh;
     padding:1px;
+    width: 80%;
+    
+    justify-content: center;
+    align-items: center;
 }
 
 .icon{
@@ -43,24 +50,30 @@ body{
 }
 
 .info{
-    padding:2em;
-    margin:2em;
+    /* padding:1em;
+    margin:1em; */
     text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .info table tr td{
     text-align:center;
     padding:2em;
 }
+.info p{
+    display: inline-block;
+    margin-left:1em ;
+    margin-right: 1em;
+    /* flex-direction: row;
+    justify-content: space-around; */
+}
 .restaurant_icon img{
     border:none;
     width:20vh;
     height:20vh;
     margin: 2em;
-
 }
-
-
 
 .td{
     text-align:center;
@@ -81,4 +94,33 @@ p{
     font-size: 1vw;;
 }
 
+.posts{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+}   
 
+.container-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+
+
+/* @media screen and (max-width: 1200px) {
+    
+  } */
+
+  @media screen and (max-width: 550px) {
+    
+    .bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
