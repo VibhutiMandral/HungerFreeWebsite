@@ -141,8 +141,7 @@ ul li {
 }
 
 .coll {
-  width: 600px;
-  height: 400px;
+  
   font-family: "roboto";
 }
 .coll img {
@@ -156,6 +155,25 @@ ul li {
   font-family: roboto;
 }
 
+@media only screen and (max-width: 1249px) {
+.coll{
+  display:flex;
+  flex-direction:column;
+  width: 600px;
+  height: 400px;
+  font-family: "roboto";
+  /* justify-content:center; */
+  align-items:center;
+  text-align:center;
+  
+}
+
+.coll img {
+  height:60vh;
+  width:60vh;
+  margin:5%;
+}
+}
 
 @media only screen and (max-width: 992px) {
   h1{
@@ -271,6 +289,25 @@ ul li {
   }
 }
 
+@media only screen and (max-width: 600px) {
+  .coll{
+    display:flex;
+    flex-direction:column;
+    width: 600px;
+    height: 400px;
+    font-family: "roboto";
+    /* justify-content:center; */
+    align-items:center;
+    text-align:center;
+    
+  }
+  
+  .coll img {
+    height:60vh;
+    width:40vh;
+    margin:5%;
+  }
+  }
 @media only screen and (max-width: 500px) {
   h1{
     font-size:5vh;
@@ -278,7 +315,7 @@ ul li {
   }
   .coll img {
     height:50vh;
-    width:auto;
+    
     margin-top:5%;
   }
   
