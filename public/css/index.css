@@ -7,6 +7,7 @@
     background-size:100%;
     overflow:hidden;
     top:0;
+    margin:0;
 
 }
 
@@ -138,14 +139,26 @@ video{
     }
     
   }
-
-  
+  height:100%;
 
   @media only screen and (max-width: 583px) {
    
     .footer_table_design{
         
         display:none;
+    }
+    
+  }
+
+  @media only screen and (max-width: 583px) {
+   
+    .footer_table_design{
+        
+        display:none;
+    }
+
+    .company_heading{
+        margin:1em;
     }
     
   }
