@@ -1,0 +1,149 @@
+/* .cover{
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding-top:10vh;
+    height:180px;
+} */
+body{
+    background-color:black;
+}
+.bar{
+    background-color:#FDD400;
+    border-radius: 12px;
+    padding:5px;
+    display:flex;
+    flex-direction: row;
+    width: 80%;
+    /* margin-top: 3em; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.inbar:hover{
+    transform: scale(1.02);
+}
+
+.inbar img:hover{
+    transform: scale(1.1);
+}
+
+
+.heading{
+    padding: 2em;
+    
+}
+.inner_box{
+    background-color:white;
+    border-radius: 12px;
+    margin-top:10vh;
+    padding:1px;
+    width: 80%;
+    
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    margin:auto auto;
+    
+}
+
+.icon img{
+    border-radius:50%;
+    height:20vh;
+    width:20vh;
+    border-color:black;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+    /* padding-top:3em;
+    margin:7em; */
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.info table tr td{
+    text-align:center;
+    padding:2em;
+}
+.info p{
+    display: inline-block;
+    margin-left:1em ;
+    margin-right: 1em;
+    /* flex-direction: row;
+    justify-content: space-around; */
+}
+.restaurant_icon img{
+    border:none;
+    width:20vh;
+    height:20vh;
+    margin: 2em;
+}
+
+.td{
+    text-align:center;
+    padding:2em;
+}
+
+.meta_restaurant{
+    text-align:left;
+    margin:2em;
+   
+}
+.name{
+    text-align:center;
+    margin:2vh;
+
+}
+p{
+    font-size: 2vh;
+}
+
+.posts{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* width: 80%; */
+}   
+
+/* .newheading
+{
+    margin-bottom: 2em;
+} */
+
+.container-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 4em;
+}
+
+
+/* @media screen and (max-width: 1200px) {
+    
+  } */
+
+  @media screen and (max-width: 550px) {
+    
+    .bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+  }
+
+  /* .cover{
+    background-color: aliceblue;
+    border-radius: 12px;
+    padding-top:10vh;
+    height:180px;
+   } */
+
+

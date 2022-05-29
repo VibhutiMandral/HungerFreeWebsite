@@ -6,6 +6,7 @@ body{
     border-radius: 12px;
     padding:5px;
     display:flex;
+    flex-direction: row;
 }
 
 .heading{
@@ -86,3 +87,17 @@ body{
 .spacing tr{
     padding:5vh;
 }
+
+
+@media screen and (max-width: 800px) {
+    .bar{
+        background-color:#FDD400;
+        border-radius: 12px;
+        padding:5px;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+  }

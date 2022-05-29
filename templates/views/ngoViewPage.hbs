@@ -39,9 +39,9 @@
                 <!-- add loop in the table instead of the rows otherwise there will be an issue in the spacing between the rows-->
                 
                 {{#each restaurantArray}}
-                    <table class="spacing">
-                        <tr >
-                            <td>
+                    <div class="spacing">
+                        {{!-- <tr > --}}
+                            {{!-- <td> --}}
                                 <div class="bar">
                                     <div class="restaurant_icon">  
                                         <img src="/img/startingphoto.png">
@@ -51,7 +51,9 @@
                                             <p> Availabilty of the following food with upto 5 plates per person each.
                                             A restaurant (sometimes known as a diner) is a place where cooked food is sold to the public, and where people sit 
                                             down to eat it. It is also a place where people go to enjoy the time and to eat a meal. </p>
-                                            <table><tr><td><i class="fa-solid fa-location-pin"></i> &nbsp {{this.restaurantEmail}} </td><td>&nbsp<i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342 </td></tr></table>
+                                            <table><tr><td><i class="fa-solid fa-location-pin"></i> &nbsp {{this.restaurantEmail}} </td></tr>
+                                            <tr><td><i class="fa-solid fa-phone"></i> &nbsp0101-2467867 </td></tr>
+                                            </table>
                                             {{!-- <a href="/readmore" > Read More </a> --}}
                                             <br>
                                             <form action="/readmore" method="post">
@@ -60,9 +62,9 @@
                                             
                                     </div>
                                 </div>
-                            </td>
-                        </tr>   
-                    </table>
+                            {{!-- / --}}
+                        {{!-- </tr>    --}}
+                    </div>
                 {{/each}}
                 
                 
