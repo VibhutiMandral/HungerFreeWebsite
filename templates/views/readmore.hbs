@@ -2,9 +2,9 @@
 
 <!-- styleSheet -->
 <link rel="stylesheet" href="/css/navbar.css" />
-<link rel="stylesheet" href="/css/index.css" />
+{{!-- <link rel="stylesheet" href="/css/index.css" /> --}}
 <link rel="stylesheet" href="/css/readmore.css" />
-<link rel="stylesheet" href="/css/aboutus.css" />
+{{!-- <link rel="stylesheet" href="/css/aboutus.css" /> --}}
 <title>ReadMore</title>
 
 </head>
@@ -13,7 +13,7 @@
 {{>navbar}}
 
 
-  <div class="container">
+  <div class="container-new">
 
   
   <div class="inner_box" >
@@ -30,23 +30,17 @@
     </section>
 
         <div class="heading">
-        <table class="info">
-            <tr>
-                <td><i class="fa fa-phone" aria-hidden="true"></i> &nbsp 120-234568</td>
-                <td><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp {{restaurant.restaurantEmail}} </td>
-                <td><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp {{restaurant.restaurantLocation}} </td>
-                <td><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{restaurant.restaurantAdminName}}</td>
-            </tr>
-        </table>
+        <div class="info">
+            <p><i class="fa fa-phone" aria-hidden="true"></i> &nbsp 120-234568</p>
+            <p><i class="fa fa-envelope" aria-hidden="true"></i> &nbsp {{restaurant.restaurantEmail}} </p>
+            <p><i class="fa fa-map-marker" aria-hidden="true"></i> &nbsp {{restaurant.restaurantLocation}} </p>
+            <p><i class="fa fa-comment" aria-hidden="true"></i> &nbsp {{restaurant.restaurantAdminName}}</p>
+        </div>
 
-        <p></p>
-        <p></p>
-        <p></p>
-
-        <table>
+        {{!-- <table> --}}
+            
             {{#each food}}
-            <tr>
-                <td>
+            <div class="posts">
                 <div class="bar">
                     <div class="restaurant_icon">  <img src="/img/startingphoto.png"></div>
                     <div class="meta_restaurant">  
@@ -57,16 +51,17 @@
                         <p><strong>Food Description: </strong>{{this.foodDescription}}</p>
                         {{!-- <a href="/readmore">read more</a> </p> --}}
                     </div>
-
                 </div>
-            </td>
-            </tr>
+            </div>
+                <br>
             {{/each}}
-        </table>
+            
+        {{!-- </table> --}}
     </div>
 </div>
 </div>
 
         
+</body>
+</html>
 
-</div>
