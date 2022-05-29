@@ -12,8 +12,7 @@
 <body>
 
     {{>navbar}}
-    <div class="container">
-        
+    <div class="container-new">
         <div class="inner_box">
             <table class="heading">
                 <tr>
@@ -27,8 +26,18 @@
                     <td>
                         <div class="space">
                             <h1 >{{ngoName}} NGO</h1>
-                            <p class="bio"> <i class="fa-solid fa-location-pin"></i> &nbsp {{ngoEmail}}</p>
+                            {{!-- <p class="bio"> <i class="fa-solid fa-location-pin"></i> &nbsp {{ngoEmail}}</p>
                             <p class="bio"> <i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342 </p>
+                             --}}
+
+                            <table>
+                                <tr>
+                                    <td class="bio"><i class="fa-solid fa-location-pin"></i> &nbsp {{ngoEmail}}</td>
+                                </tr>
+                                <tr>
+                                    <td class="bio"><i class="fa-solid fa-phone"></i> &nbsp 0101-2335452342</td>
+                                </tr>
+                            </table>
                         </div>
                     </td>
                 </tr>
