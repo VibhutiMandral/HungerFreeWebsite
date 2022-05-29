@@ -7,6 +7,7 @@ body{
     padding:5px;
     display:flex;
     flex-direction: row;
+    width: 100%;
 }
 
 .heading{
@@ -17,8 +18,12 @@ body{
     background-color:white;
     border-radius: 12px;
     margin-top:10vh;
-    padding:1px;
+    /* padding:1px; */
+    width: 80%;
+    justify-content: center;
+    align-items: center;
 }
+
 
 .icon{
     margin:auto auto;
@@ -31,7 +36,8 @@ body{
     height:20vh;
     width:20vh;
     border-color:black;
-    display: block;
+    display: flex;
+    flex-direction: row;
     margin-right: auto;
 }
 
@@ -78,8 +84,8 @@ body{
     
 }
 .spacing{
-    margin-left:10vh;
-    margin-right:10vh;
+    margin-left:3vh;
+    margin-right:3vh;
     margin-bottom:5vh;
     
 }
@@ -88,16 +94,45 @@ body{
     padding:5vh;
 }
 
+.container-new{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    
+}
+
 
 @media screen and (max-width: 800px) {
     .bar{
         background-color:#FDD400;
         border-radius: 12px;
-        padding:5px;
+        /* padding:2px; */
         display:flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
     
+    /* .icon img{
+        height:3em ;
+        width: 3em;
+    } */
+    .icon img{
+        display: none;
+    }
+
+    .space{
+        margin-left:0.5vh;   
+        
+    }
+
+    .spacing{
+        margin-left:3vh;
+        margin-right:3vh;
+        margin-bottom:5vh;
+        
+    }
+    
+
   }
