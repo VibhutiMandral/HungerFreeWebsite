@@ -70,7 +70,8 @@ body {
   }
   
   .right form {
-    width: 328px;
+    width: 80%;
+    margin:auto;
   }
   
   form input[type="text"],
