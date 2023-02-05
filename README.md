@@ -6,5 +6,5 @@ According to the United Nations Development Programme, about 40% of the food pro
 Hence, we thought of an initiative ‘HungerFree’ that would help this world to be a little better place to be in or to live in. HungerFree connects hotels, restaurants, wedding planners and party planners with customers & NGOs who then distribute this food among the people in need. HungerFree also provides a comprehensive analysis for hotels and restaurants.
 
 You can visit hungerfree at:
-https://hungerfree.herokuapp.com/
+https://hungerfree.onrender.com/
 
